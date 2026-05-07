@@ -233,7 +233,7 @@ export const HomePage = () => {
         {/* Contact CTA */}
         <div className="mt-20 flex flex-col items-center justify-center gap-4 text-center">
            <div className="flex items-center gap-4">
-              <span className="font-bold text-lg">Interested in learning more about Genesys Quantis?</span>
+              <span className="font-bold text-lg text-text-primary">Interested in learning more about Genesys Quantis?</span>
               <button className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-card hover:bg-primary/90 transition-colors">Contact Us</button>
            </div>
         </div>

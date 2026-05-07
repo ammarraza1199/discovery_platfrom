@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Sensitive Documents
+WallahGPT_Executive_Briefing.docx
+full_content_extracted.txt
+CHEMISTRY QUANTIS.docx
+Biologics_Discovery_Platform_Executive_Report.docx
+*.docx
+*.pdf
+*.txt

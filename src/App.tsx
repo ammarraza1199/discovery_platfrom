@@ -1,9 +1,8 @@
-
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
-import { ChemistryQuantisPage } from './pages/Chemistry42Page';
-import { BiologicsDiscoveryPage } from './pages/GenerativeBiologicsPage';
-import { WallahGPTPage } from './pages/PreciousGPTPage';
+import { ChemistryQuantisPage } from './pages/ChemistryQuantisPage';
+import { BiologicsDiscoveryPage } from './pages/BiologicsDiscoveryPage';
+import { WallahGPTPage } from './pages/WallahGPTPage';
 
 export default function App() {
   return (
