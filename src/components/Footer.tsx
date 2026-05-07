@@ -8,7 +8,7 @@ export const Footer = () => {
         {/* Col 1 */}
         <div>
           <div className="flex items-center gap-2 text-primary font-bold text-2xl font-heading mb-6">
-            <Diamond className="fill-primary w-6 h-6" /> BioAI
+            <Diamond className="fill-primary w-6 h-6" /> GenQuantis
           </div>
           <ul className="space-y-3 text-sm font-medium text-text-secondary">
             <li><a href="#" className="hover:text-primary transition-colors">Main</a></li>
@@ -21,7 +21,7 @@ export const Footer = () => {
         </div>
         {/* Col 2 */}
         <div>
-          <h4 className="font-bold text-lg mb-6">Pharma.ai</h4>
+          <h4 className="font-bold text-lg mb-6">GenQuantis</h4>
           <ul className="space-y-3 text-sm font-medium text-text-secondary">
             <li><a href="#" className="hover:text-primary transition-colors opacity-40 cursor-not-allowed">PandaOmics</a></li>
             <li><Link to="/biologics-discovery" className="hover:text-primary transition-colors">Biologics Discovery</Link></li>
@@ -58,7 +58,7 @@ export const Footer = () => {
 
       <div className="border-t border-primary/10 max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-text-secondary">
         <div className="flex gap-4 items-center">
-          <span>© 2026 BioAI Medicine</span>
+          <span>© 2026 GenQuantis</span>
           <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-primary transition-colors">Cookies Policy</a>
         </div>

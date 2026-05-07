@@ -27,9 +27,9 @@ export const HomePage = () => {
   return (
     <div className="min-h-screen font-sans text-text-primary bg-white">
       <Navbar />
-      
+
       {/* Combined Hero & Platform Section matching the image layout */}
-      <section 
+      <section
         onMouseMove={handleMouseMove}
         className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto overflow-hidden"
       >
@@ -40,15 +40,15 @@ export const HomePage = () => {
           {/* Left Column: Hero Text & 3D Grid */}
           <div className="flex flex-col">
             <FadeInWhenVisible>
-              <motion.h1 
+              <motion.h1
                 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                Genesys <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light-blue">Quantis</span>
+                Gen<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light-blue">Quantis</span>
               </motion.h1>
-              <motion.p 
+              <motion.p
                 className="text-lg text-text-secondary leading-relaxed mb-12 max-w-md"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -57,9 +57,9 @@ export const HomePage = () => {
                 Commercially-available end-to-end generative AI software and automation platform designed to improve the quality and productivity of pharmaceutical research.
               </motion.p>
             </FadeInWhenVisible>
-            
+
             <div className="relative h-[400px] md:h-[600px] w-full perspective-[1000px] mt-8 overflow-hidden rounded-3xl">
-              <motion.div 
+              <motion.div
                 style={{ rotateX, rotateY, rotateZ: -12 }}
                 className="absolute inset-0 flex items-center justify-center transform preserve-3d scale-75 md:scale-100 origin-left"
               >
@@ -90,7 +90,7 @@ export const HomePage = () => {
                       boxShadow: '0 0 40px rgba(77,163,255,0.6)'
                     }}
                     transition={{
-                      duration: 4 + i*0.5,
+                      duration: 4 + i * 0.5,
                       repeat: Infinity,
                       repeatType: "reverse",
                       ease: "easeInOut",
@@ -98,7 +98,7 @@ export const HomePage = () => {
                     }}
                   >
                     <div className="absolute inset-0 bg-white/20 rounded-2xl backdrop-blur-sm mix-blend-overlay flex items-center justify-center">
-                       <Diamond className="w-10 h-10 text-white opacity-50" />
+                      <Diamond className="w-10 h-10 text-white opacity-50" />
                     </div>
                   </motion.div>
                 ))}
@@ -120,7 +120,7 @@ export const HomePage = () => {
                   </Link>
                   <Link to="/biologics-discovery" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
-                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:-rotate-3 transition-transform"><TestTube className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">Discovery Platform</h4></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:-rotate-3 transition-transform"><TestTube className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GenQuantis Platform</h4></div>
                     <p className="text-xs text-text-secondary pr-6">In-silico simulation of biological experiments</p>
                   </Link>
                   <Link to="/biologics-discovery" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
@@ -199,7 +199,7 @@ export const HomePage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="card p-4 rounded-3xl hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 bg-white/80 backdrop-blur-xl border border-primary/5">
                 <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">Science42</h3>
                 <div className="space-y-3">
@@ -229,19 +229,18 @@ export const HomePage = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Contact CTA */}
         <div className="mt-20 flex flex-col items-center justify-center gap-4 text-center">
-           <div className="flex items-center gap-4">
-              <span className="font-bold text-lg text-text-primary">Interested in learning more about Genesys Quantis?</span>
-              <button className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-card hover:bg-primary/90 transition-colors">Contact Us</button>
-           </div>
+          <div className="flex items-center gap-4">
+            <span className="font-bold text-lg text-text-primary">Interested in learning more about GenQuantis?</span>
+            <button className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-card hover:bg-primary/90 transition-colors">Contact Us</button>
+          </div>
         </div>
       </section>
 
-      {/* 2-page overview section */}
       <section className="bg-section-alt py-16 text-center border-y border-primary/10">
-        <h2 className="text-2xl font-bold mb-8">Discovery Platform 2-page overview</h2>
+        <h2 className="text-2xl font-bold mb-8">GenQuantis 2-page overview</h2>
         <div className="flex flex-col items-center gap-4">
           <ArrowRight className="w-6 h-6 text-primary rotate-90" />
           <button className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-card hover:bg-primary/90 transition-colors flex items-center gap-2">

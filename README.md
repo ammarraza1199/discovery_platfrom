@@ -1,12 +1,12 @@
-# Genesys Quantis | Discovery Platform
+# GenQuantis | Discovery Platform
 
-![Genesys Quantis Banner](https://img.shields.io/badge/Status-In--Development-blue?style=for-the-badge)
+![GenQuantis Banner](https://img.shields.io/badge/Status-In--Development-blue?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Genesys Quantis is a state-of-the-art, commercially-available end-to-end generative AI software and automation platform. It is specifically designed to revolutionize pharmaceutical research by improving the quality and productivity of drug discovery workflows through advanced In-Silico simulations and AI-driven insights.
+GenQuantis is a state-of-the-art, commercially-available end-to-end generative AI software and automation platform. It is specifically designed to revolutionize pharmaceutical research by improving the quality and productivity of drug discovery workflows through advanced In-Silico simulations and AI-driven insights.
 
 ## 🚀 Key Platform Modules
 

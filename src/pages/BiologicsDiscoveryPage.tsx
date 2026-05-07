@@ -323,9 +323,9 @@ export const BiologicsDiscoveryPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl font-bold leading-tight">The Strategic Mandate: <br /><span className="text-primary">Why BDP 2.0?</span></h2>
+              <h2 className="text-4xl font-bold leading-tight">The Strategic Mandate: <br /><span className="text-primary">Why GenQuantis?</span></h2>
               <p className="text-lg text-text-secondary leading-relaxed">
-                Modern drug discovery is no longer limited by scientific hypothesis, but by **operational velocity**. The Biologics Discovery Platform (BDP) 2.0 is designed as an enterprise infrastructure to solve the three core challenges of modern pharma.
+                Modern drug discovery is no longer limited by scientific hypothesis, but by operational velocity. GenQuantis is designed as an enterprise infrastructure to solve the three core challenges of modern pharma.
               </p>
               
               <div className="space-y-6">
