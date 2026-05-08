@@ -611,17 +611,11 @@ export const BiologicsDiscoveryPage = () => {
                 <h4 className="text-primary font-bold mb-6 flex items-center gap-2 uppercase tracking-widest text-xs">
                   <Shield size={20} /> Regulatory Compliance
                 </h4>
-                <p className="text-text-secondary text-lg leading-relaxed mb-8 italic">
-                  "The platform successfully bridges the gap from genomic hypothesis to a validated, lab-ready protocol. The integration of SA scores is a masterclass in realistic drug design."
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Our discovery workflows are designed to meet global pharmaceutical standards, ensuring data integrity and traceable computational logic throughout the target identification and validation phases.
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-primary/20 border border-primary/10" />
-                  <div>
-                    <div className="text-sm font-bold">Independent Scientific Auditor</div>
-                    <div className="text-xs text-text-secondary">Global Pharma Standards Council</div>
-                  </div>
-                </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -669,7 +663,8 @@ export const BiologicsDiscoveryPage = () => {
                   <div>
                     <div className="flex justify-between mb-2">
                       <span className="font-bold text-sm">Pipeline Velocity</span>
-                      <span className="text-primary font-bold">8.5x Faster</span>
+                      <span className="text-primary font-bold">8.5x* Faster</span>
+
                     </div>
                     <div className="w-full h-2 bg-section-alt rounded-full overflow-hidden">
                       <div className="w-[85%] h-full bg-primary" />
@@ -678,17 +673,19 @@ export const BiologicsDiscoveryPage = () => {
                   <div>
                     <div className="flex justify-between mb-2">
                       <span className="font-bold text-sm">Marginal Screening Cost</span>
-                      <span className="text-primary font-bold">100x Lower</span>
+                      <span className="text-primary font-bold">100x* Lower</span>
+
                     </div>
                     <div className="w-full h-2 bg-section-alt rounded-full overflow-hidden">
                       <div className="w-[99%] h-full bg-primary" />
                     </div>
                   </div>
                   <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10 mt-8">
-                     <p className="text-sm text-text-secondary italic">
-                       "BDP 2.0 isn't just a suite of tools; it is a competitive necessity for any organization aiming to lead in the age of generative biology."
+                     <p className="text-sm text-text-secondary">
+                       The BDP 2.0 framework provides an enterprise-ready infrastructure for modern biologics discovery, optimizing the digital chain from target ID to robotic validation.
                      </p>
                   </div>
+
                 </div>
               </div>
             </div>
