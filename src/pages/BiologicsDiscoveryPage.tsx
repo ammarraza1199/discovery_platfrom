@@ -25,6 +25,8 @@ import { ProteinRibbonIcon, DnaHelixIcon } from '../components/ScientificIcons';
 import targetIdImg from '../assets/workflow_images/Target Identification.png';
 import virtualHitImg from '../assets/workflow_images/Virtual Hit Screening.png';
 import molecularDockingImg from '../assets/workflow_images/Molecular Docking.png';
+import leadOptImg from '../assets/workflow_images/Lead Optimization.png';
+
 
 
 
@@ -153,7 +155,9 @@ export const BiologicsDiscoveryPage = () => {
       title: 'Lead Optimization',
       subtitle: 'Generative Evolutionary AI',
       icon: Zap,
+      image: leadOptImg,
       description: 'AI-driven molecular evolution with strict Synthetic Accessibility (SA) enforcement.',
+
       fullExplanation: [
         "Lead Optimization transforms hits into clinical candidates through a generative evolutionary process. Our Genetic Algorithm mutates molecules through crossover and point-mutations to optimize for multiple parameters simultaneously.",
         "Crucially, the system strictly enforces Synthetic Accessibility (SA) scores at every generation. This ensures that the AI-designed molecules aren't just theoretically effective, but can be reliably synthesized in a standard wet-lab environment."
@@ -168,43 +172,18 @@ export const BiologicsDiscoveryPage = () => {
       processData: {
         input: {
           title: "Lead Candidate",
-          items: [
-            { label: "Hit Structures", icon: Sparkles, description: "Identified hits for evolutionary optimization." },
-            { label: "MPO Constraints", icon: Target, description: "Multi-parameter objectives (Affinity, PK)." }
-          ]
+          items: []
         },
         processing: {
           title: "Generative Evolution",
-          groups: [
-            {
-              title: "Mutation Engine",
-              items: [
-                { label: "Genetic Algorithm", icon: Activity },
-                { label: "Scaffold Morphing", icon: Layers },
-                { label: "MolGPT Design", icon: Brain },
-                { label: "REINVENT Logic", icon: Zap }
-              ]
-            },
-            {
-              title: "Scoring Hub",
-              items: [
-                { label: "SA Enforcement", icon: Shield },
-                { label: "MPO Balancing", icon: Target },
-                { label: "Bioisostere Swap", icon: Sparkles },
-                { label: "SAR Trend Sync", icon: Cpu }
-              ]
-            }
-          ]
+          groups: []
         },
-
         output: {
           title: "Optimized Leads",
-          items: [
-            { label: "Refined Candidates", icon: ProteinRibbonIcon, description: "Molecules optimized for clinical success." },
-            { label: "Synthesis Protocols", icon: FileText, description: "Validated routes for wet-lab prep." }
-          ]
+          items: []
         }
       }
+
     },
 
     {
