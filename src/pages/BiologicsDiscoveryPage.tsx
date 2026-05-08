@@ -6,11 +6,10 @@ import { InteractiveHeroBackground } from '../components/InteractiveHeroBackgrou
 import { 
   Search, Zap, FlaskConical, ShieldCheck, 
   Bot, ArrowRight, Shield, CheckCircle, ChevronRight,
-  MousePointer2, Database, Brain, Cpu, Activity, FileText, Search as SearchIcon, Sparkles, Layers, Target, Network, Filter,
-
-
-  Waves as WavesIcon
+  MousePointer2, Brain, Activity, FileText, Layers, Network
 } from 'lucide-react';
+
+
 
 import { motion } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
@@ -19,7 +18,8 @@ import { ThreeStepProcess } from '../components/ThreeStepProcess';
 
 
 
-import { ProteinRibbonIcon, DnaHelixIcon } from '../components/ScientificIcons';
+import { DnaHelixIcon } from '../components/ScientificIcons';
+
 
 
 import targetIdImg from '../assets/workflow_images/Target Identification.png';
@@ -27,6 +27,8 @@ import virtualHitImg from '../assets/workflow_images/Virtual Hit Screening.png';
 import molecularDockingImg from '../assets/workflow_images/Molecular Docking.png';
 import leadOptImg from '../assets/workflow_images/Lead Optimization.png';
 import admetImg from '../assets/workflow_images/ADMET Intel.png';
+import wetLabImg from '../assets/workflow_images/wet-lab.png';
+
 
 
 
@@ -229,7 +231,9 @@ export const BiologicsDiscoveryPage = () => {
       title: 'Wet-Lab Validation',
       subtitle: 'Native Integration',
       icon: Bot,
+      image: wetLabImg,
       description: 'Direct bridge from in-silico prediction to automated wet-lab validation.',
+
       fullExplanation: [
         "Wet-Lab Validation closes the loop between the digital and physical laboratories. The system natively integrates with automated liquid handlers by automatically generating executable Python protocols based on the platform's predictions.",
         "This seamless transition eliminates human transcription errors and enables high-throughput blinded assays for hit confirmation. The platform tracks the results of these experiments, feeding the physical data back into the AI models for continuous learning."
@@ -244,38 +248,18 @@ export const BiologicsDiscoveryPage = () => {
       processData: {
         input: {
           title: "Digital Protocols",
-          items: [
-            { label: "Validated Leads", icon: CheckCircle, description: "Candidates nominated for physical validation." },
-            { label: "Assay Parameters", icon: Layers, description: "Liquid handling and plate map logic." }
-          ]
+          items: []
         },
         processing: {
           title: "Wet-Lab Sync",
-          groups: [
-            {
-              title: "Compilation",
-              items: [
-                { label: "Python Protocol Gen", icon: FileText },
-                { label: "API Handshake", icon: Network }
-              ]
-            },
-            {
-              title: "Automation",
-              items: [
-                { label: "OT-2 Execution", icon: Bot },
-                { label: "Error Triage", icon: Shield }
-              ]
-            }
-          ]
+          groups: []
         },
         output: {
           title: "Wet-lab Validation",
-          items: [
-            { label: "Confirmatory Results", icon: Activity, description: "Physical assay data for hit confirmation." },
-            { label: "Learning Loop Feedback", icon: Brain, description: "Data injection back into AI models." }
-          ]
+          items: []
         }
       }
+
     }
 
   ];
