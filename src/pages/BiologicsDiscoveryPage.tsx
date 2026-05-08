@@ -6,7 +6,8 @@ import { InteractiveHeroBackground } from '../components/InteractiveHeroBackgrou
 import { 
   Search, Zap, FlaskConical, ShieldCheck, 
   Bot, ArrowRight, Shield, CheckCircle, ChevronRight,
-  MousePointer2, Database, Fingerprint, Brain, Cpu, Activity, FileText, Search as SearchIcon, Sparkles, Layers, Target, Network, Microscope, Filter,
+  MousePointer2, Database, Fingerprint, Brain, Cpu, Activity, FileText, Search as SearchIcon, Sparkles, Layers, Target, Network, Filter,
+
   Waves as WavesIcon
 } from 'lucide-react';
 
@@ -17,8 +18,11 @@ import { ThreeStepProcess } from '../components/ThreeStepProcess';
 
 
 
-import { ProteinRibbonIcon, PeptideIcon, DnaHelixIcon, MoleculeIcon } from '../components/ScientificIcons';
+import { ProteinRibbonIcon, DnaHelixIcon, MoleculeIcon } from '../components/ScientificIcons';
+
 import targetIdImg from '../assets/workflow_images/Target Identification.png';
+import virtualHitImg from '../assets/workflow_images/Virtual Hit Screening.png';
+
 
 export const BiologicsDiscoveryPage = () => {
 
@@ -72,7 +76,9 @@ export const BiologicsDiscoveryPage = () => {
       title: 'Virtual Hit Screening',
       subtitle: 'XGBoost Triage',
       icon: Search,
+      image: virtualHitImg,
       description: '2,400D mathematical fingerprinting for high-accuracy binding prediction.',
+
       fullExplanation: [
         "Our Virtual Hit Screening engine performs compound triage at astronomical scales. By representing molecules using 2,400-dimensional mathematical fingerprints, the system captures subtle chemical nuances that traditional methods miss.",
         "The core logic is powered by XGBoost models trained on a proprietary dataset of over 100 million assay results. This allows the system to predict binding affinities with sub-nanomolar accuracy, significantly reducing the pool of candidates for physical screening."
@@ -87,47 +93,18 @@ export const BiologicsDiscoveryPage = () => {
       processData: {
         input: {
           title: "Library Ingestion",
-          items: [
-            { label: "Compound Libraries", icon: Database, description: "Millions of virtual drug candidates." },
-            { label: "2,400D Fingerprints", icon: Fingerprint, description: "High-dimensional mathematical representations." },
-            { label: "ADMET Filters", icon: ShieldCheck, description: "Initial pharmacokinetic and toxicity constraints." }
-          ]
-
+          items: []
         },
         processing: {
           title: "XGBoost Triage",
-          groups: [
-            {
-              title: "Molecular Coding",
-              items: [
-                { label: "Morgan ECFP4", icon: MoleculeIcon },
-                { label: "MACCS Keys", icon: Fingerprint },
-                { label: "RDKit Descriptors", icon: Activity },
-                { label: "Vector Encoding", icon: Cpu }
-              ]
-            },
-            {
-              title: "Affinity Logic",
-              items: [
-                { label: "XGBoost Engine", icon: Zap },
-                { label: "pIC50 Prediction", icon: Target },
-                { label: "Async Pruning", icon: Filter },
-                { label: "Top-100 Retention", icon: Layers }
-              ]
-            }
-          ]
+          groups: []
         },
-
         output: {
           title: "Candidate List",
-          items: [
-            { label: "Top 100 Scored", icon: FileText, description: "Prioritized list of highest-affinity candidates." },
-            { label: "Diversity Report", icon: Activity, description: "Analysis of chemical scaffold diversity." },
-            { label: "Lead Triage", icon: CheckCircle, description: "Prioritized list for subsequent docking validation." }
-          ]
-
+          items: []
         }
       }
+
     },
 
     {
