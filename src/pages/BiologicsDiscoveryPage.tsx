@@ -26,6 +26,8 @@ import targetIdImg from '../assets/workflow_images/Target Identification.png';
 import virtualHitImg from '../assets/workflow_images/Virtual Hit Screening.png';
 import molecularDockingImg from '../assets/workflow_images/Molecular Docking.png';
 import leadOptImg from '../assets/workflow_images/Lead Optimization.png';
+import admetImg from '../assets/workflow_images/ADMET Intel.png';
+
 
 
 
@@ -191,7 +193,9 @@ export const BiologicsDiscoveryPage = () => {
       title: 'ADMET Intelligence',
       subtitle: 'GNN Property Prediction',
       icon: ShieldCheck,
+      image: admetImg,
       description: 'Automated pharmacology & toxicity profiling via Graph Neural Networks.',
+
       fullExplanation: [
         "The ADMET module provides early-phase safety profiling using state-of-the-art Graph Neural Networks (GNNs). By treating molecules as dynamic graphs, the system identifies structural motifs responsible for toxicity or poor bioavailability.",
         "The models predict critical metrics such as Blood-Brain Barrier (BBB) penetration, hERG channel inhibition (cardiotoxicity), and CYP450 metabolic profiles. This 'Safety-First' approach ensures that developers identify potential failures before they reach expensive clinical trials."
@@ -206,43 +210,18 @@ export const BiologicsDiscoveryPage = () => {
       processData: {
         input: {
           title: "Molecular Graphs",
-          items: [
-            { label: "Lead Structures", icon: ProteinRibbonIcon, description: "Final candidates for safety profiling." },
-            { label: "Proprietary Assays", icon: Database, description: "Historical safety and tox data." }
-          ]
+          items: []
         },
         processing: {
           title: "Safety Profiling",
-          groups: [
-            {
-              title: "GNN Inference",
-              items: [
-                { label: "Tox21 Screening", icon: Brain },
-                { label: "ClinTox Mapping", icon: Activity },
-                { label: "hERG Detection", icon: Target },
-                { label: "Liver Tox Scan", icon: Shield }
-              ]
-            },
-            {
-              title: "Pharmacokinetics",
-              items: [
-                { label: "BBBP Classification", icon: Layers },
-                { label: "Lipinski Filter", icon: Filter },
-                { label: "Veber Compliance", icon: FileText },
-                { label: "CYP450 Profile", icon: Sparkles }
-              ]
-            }
-          ]
+          groups: []
         },
-
         output: {
           title: "Safety Passport",
-          items: [
-            { label: "Risk Radar Maps", icon: Target, description: "Visual toxicity and ADMET profile." },
-            { label: "Pharmacology Dossier", icon: FileText, description: "Comprehensive safety documentation." }
-          ]
+          items: []
         }
       }
+
     },
 
     {
