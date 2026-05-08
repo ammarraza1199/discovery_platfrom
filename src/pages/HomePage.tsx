@@ -41,7 +41,7 @@ export const HomePage = () => {
           <div className="flex flex-col">
             <FadeInWhenVisible>
               <motion.h1
-                className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight"
+                className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -111,7 +111,7 @@ export const HomePage = () => {
             {/* Col 1 */}
             <div className="flex flex-col gap-6">
               <div className="card p-4 rounded-3xl hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 bg-white/80 backdrop-blur-xl border border-primary/5">
-                <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">Biologics Discovery</h3>
+                <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">GQ Discovery</h3>
                 <div className="space-y-3">
                   <Link to="/biologics-discovery" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
@@ -120,7 +120,7 @@ export const HomePage = () => {
                   </Link>
                   <Link to="/biologics-discovery" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
-                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:-rotate-3 transition-transform"><TestTube className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GenQuantis Platform</h4></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:-rotate-3 transition-transform"><TestTube className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GQ Discovery Platform</h4></div>
                     <p className="text-xs text-text-secondary pr-6">In-silico simulation of biological experiments</p>
                   </Link>
                   <Link to="/biologics-discovery" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
@@ -132,21 +132,21 @@ export const HomePage = () => {
               </div>
 
               <div className="card p-4 rounded-3xl hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 bg-white/80 backdrop-blur-xl border border-primary/5">
-                <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">WallahGPT (LLMs)</h3>
+                <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">GQ GPT (LLMs)</h3>
                 <div className="space-y-3">
                   <Link to="/wallahgpt" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
-                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-3 transition-transform"><Hourglass className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">WallahGPT1</h4></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-3 transition-transform"><Hourglass className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GQ GPT 1</h4></div>
                     <p className="text-xs text-text-secondary pr-6">Biological Aging Clock prediction</p>
                   </Link>
                   <Link to="/wallahgpt" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
-                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:-rotate-3 transition-transform"><BarChart className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">WallahGPT2</h4></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:-rotate-3 transition-transform"><BarChart className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GQ GPT 2</h4></div>
                     <p className="text-xs text-text-secondary pr-6">Synthetic Omics Generator</p>
                   </Link>
                   <Link to="/wallahgpt" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
-                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform"><Brain className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">WallahGPT3</h4></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform"><Brain className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GQ GPT 3</h4></div>
                     <p className="text-xs text-text-secondary pr-6">Digital Drug Discovery simulation</p>
                   </Link>
                 </div>
@@ -156,7 +156,7 @@ export const HomePage = () => {
             {/* Col 2 */}
             <div className="flex flex-col gap-6 z-10">
               <div className="card p-4 rounded-3xl hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 bg-white/80 backdrop-blur-xl border border-primary/5">
-                <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">Chemistry Quantis</h3>
+                <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">GQ Chemistry</h3>
                 <div className="space-y-3">
                   <Link to="/chemistry-quantis" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>

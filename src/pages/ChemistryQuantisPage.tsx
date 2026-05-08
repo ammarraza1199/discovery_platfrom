@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
+import { SnakePipeline, workflowData } from '../components/WorkflowPipeline';
 
 export const ChemistryQuantisPage = () => {
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
@@ -170,8 +171,8 @@ export const ChemistryQuantisPage = () => {
                 }}
                 className="text-6xl md:text-8xl font-extrabold mb-8 leading-[0.9] tracking-tighter text-text-primary"
               >
-                Chemistry <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light-blue">Quantis</span>
+                GQ <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light-blue">Chemistry</span>
               </motion.h1>
 
               <motion.p 
@@ -279,25 +280,17 @@ export const ChemistryQuantisPage = () => {
         </div>
       </section>
 
-      {/* Process Visualization */}
-      <section className="py-24 bg-section-alt border-y border-primary/10">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-16">The Quantis Pipeline</h2>
-          <div className="flex flex-wrap justify-center gap-12">
-             {[
-               { icon: FileSearch, label: "Literature Extraction" },
-               { icon: Layers, label: "Library Visualization" },
-               { icon: Sparkles, label: "AI Generation" },
-               { icon: GitBranch, label: "Synthesis Route" }
-             ].map((step, i) => (
-               <div key={i} className="flex flex-col items-center">
-                  <div className="w-20 h-20 bg-white rounded-2xl shadow-card flex items-center justify-center text-primary mb-4 border border-primary/5">
-                     <step.icon size={32} />
-                  </div>
-                  <span className="text-[10px] font-black text-text-secondary uppercase tracking-widest">{step.label}</span>
-               </div>
-             ))}
+      {/* Process Visualization (Interactive Snake Pipeline) */}
+      <section className="py-24 bg-slate-50 border-y border-primary/10 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">The Quantis Pipeline</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Expert-level chemical space navigation and generative design engine.
+            </p>
           </div>
+          
+          <SnakePipeline workflow={workflowData.find(w => w.id === 'chemistry')!} />
         </div>
       </section>
 

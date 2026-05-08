@@ -23,12 +23,12 @@ export const Footer = () => {
         <div>
           <h4 className="font-bold text-lg mb-6">GenQuantis</h4>
           <ul className="space-y-3 text-sm font-medium text-text-secondary">
-            <li><a href="#" className="hover:text-primary transition-colors opacity-40 cursor-not-allowed">PandaOmics</a></li>
-            <li><Link to="/biologics-discovery" className="hover:text-primary transition-colors">Biologics Discovery</Link></li>
-            <li><Link to="/chemistry-quantis" className="hover:text-primary transition-colors">Chemistry Quantis</Link></li>
+            <li><a href="#" className="hover:text-primary transition-colors opacity-40 cursor-not-allowed">PandaOmics (GQ Discovery)</a></li>
+            <li><Link to="/biologics-discovery" className="hover:text-primary transition-colors">GQ Discovery</Link></li>
+            <li><Link to="/chemistry-quantis" className="hover:text-primary transition-colors">GQ Chemistry</Link></li>
             <li><a href="#" className="hover:text-primary transition-colors opacity-40 cursor-not-allowed">inClinico</a></li>
             <li><a href="#" className="hover:text-primary transition-colors opacity-40 cursor-not-allowed">Science42 DONA</a></li>
-            <li><Link to="/wallahgpt" className="hover:text-primary transition-colors">WallahGPT</Link></li>
+            <li><Link to="/wallahgpt" className="hover:text-primary transition-colors">GQ GPT</Link></li>
             <li><a href="#" className="hover:text-primary transition-colors opacity-40 cursor-not-allowed">Nac101</a></li>
           </ul>
         </div>

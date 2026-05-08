@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
+import { SnakePipeline, workflowData } from '../components/WorkflowPipeline';
 
 export const WallahGPTPage = () => {
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
@@ -18,12 +19,12 @@ export const WallahGPTPage = () => {
   const features = [
     {
       id: 'wallah1',
-      title: 'WallahGPT 1',
+      title: 'GQ GPT 1',
       subtitle: 'The Biological Aging Clock',
       icon: Hourglass,
       description: 'Predicting cellular age and disease risk signatures through 15-gene analysis.',
       fullExplanation: [
-        "WallahGPT 1 provides a high-precision Biological Aging Clock that differentiates between chronological age and cellular health. By analyzing specific 15-gene molecular signatures, the system identifies the key drivers of senescence and biological decline.",
+        "GQ GPT 1 provides a high-precision Biological Aging Clock that differentiates between chronological age and cellular health. By analyzing specific 15-gene molecular signatures, the system identifies the key drivers of senescence and biological decline.",
         "The platform calculates a proprietary 'Age Acceleration Score,' which allows researchers to rank candidates for anti-aging therapeutic interventions. This mechanistic insight helps identify novel targets for age-related diseases like Alzheimer's and cardiovascular decline."
       ],
       capabilities: [
@@ -36,12 +37,12 @@ export const WallahGPTPage = () => {
     },
     {
       id: 'wallah2',
-      title: 'WallahGPT 2',
+      title: 'GQ GPT 2',
       subtitle: 'Synthetic Omics Generator',
       icon: BarChart,
       description: 'HIPAA-compliant generation of biologically faithful research data.',
       fullExplanation: [
-        "WallahGPT 2 is a state-of-the-art generative engine for synthetic biological data. It allows researchers to create high-fidelity transcriptome (RNA-Seq) and methylation matrices that are statistically indistinguishable from real patient data.",
+        "GQ GPT 2 is a state-of-the-art generative engine for synthetic biological data. It allows researchers to create high-fidelity transcriptome (RNA-Seq) and methylation matrices that are statistically indistinguishable from real patient data.",
         "This ensures full HIPAA and GDPR compliance by enabling massive-scale model training without the need for sensitive, identifying patient information. The synthetic data preserves all complex biological correlations, making it a perfect proxy for early-phase in-silico experimentation."
       ],
       capabilities: [
@@ -54,12 +55,12 @@ export const WallahGPTPage = () => {
     },
     {
       id: 'wallah3',
-      title: 'WallahGPT 3',
+      title: 'GQ GPT 3',
       subtitle: 'Digital Discovery Engine',
       icon: Brain,
       description: 'High-throughput virtual screening and gene perturbation mapping.',
       fullExplanation: [
-        "WallahGPT 3 performs virtual High-Throughput Screening (HTS) at unprecedented scales, capable of simulating the effects of 60,000+ compounds in a digital environment.",
+        "GQ GPT 3 performs virtual High-Throughput Screening (HTS) at unprecedented scales, capable of simulating the effects of 60,000+ compounds in a digital environment.",
         "The engine generates 'Gene Expression Perturbation Maps' that visualize how specific molecules affect biological pathways at a mechanistic level. This allows researchers to predict both primary efficacy and potential off-target effects before a single physical experiment is conducted."
       ],
       capabilities: [
@@ -115,7 +116,7 @@ export const WallahGPTPage = () => {
               }}
               className="text-7xl md:text-9xl font-extrabold mb-8 leading-[0.8] tracking-tighter text-text-primary"
             >
-              Wallah<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light-blue">GPT</span>
+              GQ<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light-blue"> GPT</span>
             </motion.h1>
 
             <motion.p 
@@ -226,34 +227,23 @@ export const WallahGPTPage = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Impact Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-          <div className="flex-1">
-             <h2 className="text-4xl font-bold mb-8">Integrated Research Workflow</h2>
-             <div className="space-y-8">
-               {[
-                 { step: "01", title: "Target Identification", desc: "Identify mTOR dysregulation signatures and Alzheimer's risk factors using WallahGPT 1." },
-                 { step: "02", title: "Synthetic Scaling", desc: "Generate 5,000 synthetic RNA-Seq profiles with WallahGPT 2 for privacy-safe model training." },
-                 { step: "03", title: "Virtual HTS", desc: "Run a 60,000 compound screen in minutes to find lead candidates with high selectivity." }
-               ].map((s, i) => (
-                 <div key={i} className="flex gap-8 items-start">
-                    <div className="text-5xl font-black text-primary/10 leading-none">{s.step}</div>
-                    <div>
-                      <h4 className="font-bold text-text-primary text-xl mb-2">{s.title}</h4>
-                      <p className="text-text-secondary leading-relaxed">{s.desc}</p>
-                    </div>
-                 </div>
-               ))}
-             </div>
+      </section>      {/* Integrated Research Workflow (Interactive Snake Pipeline) */}
+      <section className="py-24 px-6 bg-slate-50 border-y border-primary/10 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Integrated Research Workflow</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              From biological insight to digital screening — accelerating discovery through mechanistic simulation.
+            </p>
           </div>
-          <div className="flex-1 bg-section-alt p-12 rounded-[40px] border border-primary/10">
+          
+          <SnakePipeline workflow={workflowData.find(w => w.id === 'wallah')!} />
+          
+          <div className="mt-20 bg-white p-12 rounded-[40px] border border-primary/10 shadow-sm">
               <h4 className="font-bold mb-8 flex items-center gap-2 text-primary text-sm uppercase tracking-widest">
                 <Zap size={20} className="text-primary" /> The Business Impact
               </h4>
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                  {[
                    { label: "Time to Results", value: "Seconds vs Months" },
                    { label: "Regulatory Friction", value: "Zero (Synthetic Data)" },
@@ -268,6 +258,7 @@ export const WallahGPTPage = () => {
           </div>
         </div>
       </section>
+
 
       {/* Strategic Advantage Section */}
       <section className="py-24 px-6 bg-section-alt border-t border-primary/10">

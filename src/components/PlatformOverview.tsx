@@ -27,7 +27,7 @@ export const PlatformOverview = () => {
               <div className="card p-8 rounded-2xl border-l-4 border-l-primary h-full">
                 <h3 className="text-xl font-bold flex items-center gap-2 mb-6 text-primary"><Dna className="w-6 h-6" /> Biology AI</h3>
                 <ul className="space-y-3 font-medium text-text-secondary">
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> Biologics Discovery</li>
+                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> GQ Discovery</li>
                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> Protein Design</li>
                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> Virtual Hit Screening</li>
                 </ul>
@@ -37,7 +37,7 @@ export const PlatformOverview = () => {
               <div className="card p-8 rounded-2xl border-l-4 border-l-primary h-full">
                 <h3 className="text-xl font-bold flex items-center gap-2 mb-6 text-primary"><FlaskConical className="w-6 h-6" /> Chemistry AI</h3>
                 <ul className="space-y-3 font-medium text-text-secondary">
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> Chemistry Quantis</li>
+                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> GQ Chemistry</li>
                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> Retrosynthetic Planning</li>
                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> MolSpace Explorer</li>
                 </ul>
@@ -47,7 +47,7 @@ export const PlatformOverview = () => {
               <div className="card p-8 rounded-2xl border-l-4 border-l-primary h-full">
                 <h3 className="text-xl font-bold flex items-center gap-2 mb-6 text-primary"><Brain className="w-6 h-6" /> Foundation Models</h3>
                 <ul className="space-y-3 font-medium text-text-secondary">
-                  <li className="flex items-center gap-2 text-primary font-bold"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> WallahGPT <Star className="w-3 h-3 fill-primary" /></li>
+                  <li className="flex items-center gap-2 text-primary font-bold"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> GQ GPT <Star className="w-3 h-3 fill-primary" /></li>
                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> Synthetic Omics</li>
                   <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> Digital Drug Discovery</li>
                 </ul>

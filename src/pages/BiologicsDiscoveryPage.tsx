@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
+import { SnakePipeline, workflowData } from '../components/WorkflowPipeline';
 
 export const BiologicsDiscoveryPage = () => {
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
@@ -169,7 +170,7 @@ export const BiologicsDiscoveryPage = () => {
               }}
               className="text-6xl md:text-8xl font-extrabold mb-8 leading-[0.9] tracking-tighter text-text-primary"
             >
-              Biologics <br />
+              GQ <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-light-blue">Discovery 2.0</span>
             </motion.h1>
 
@@ -249,29 +250,17 @@ export const BiologicsDiscoveryPage = () => {
         </div>
       </section>
 
-      {/* Workflow Visualization (Light Theme Refined) */}
-      <section className="py-24 bg-section-alt relative overflow-hidden border-y border-primary/10">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-16">The Unbroken Chain</h2>
-          <div className="flex flex-wrap justify-center gap-6 relative">
-             {/* Simple Data Flow Visual */}
-             {[
-               { icon: Dna, label: "Genomic Input" },
-               { icon: Search, label: "AI Screening" },
-               { icon: FlaskConical, label: "Physics Docking" },
-               { icon: Bot, label: "Robotic Confirmation" }
-             ].map((step, i) => (
-               <div key={i} className="flex items-center gap-6">
-                 <div className="flex flex-col items-center">
-                    <div className="w-20 h-20 bg-white rounded-full shadow-card flex items-center justify-center text-primary relative z-10">
-                       <step.icon size={28} />
-                    </div>
-                    <span className="text-xs font-bold mt-4 text-text-secondary uppercase">{step.label}</span>
-                 </div>
-                 {i < 3 && <ArrowRight className="text-primary/30 w-8 h-8 hidden lg:block" />}
-               </div>
-             ))}
+      {/* Workflow Visualization (Interactive Snake Pipeline) */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden border-y border-primary/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Operational Pipeline</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              From target identification to clinical candidate selection — an unbroken digital chain.
+            </p>
           </div>
+          
+          <SnakePipeline workflow={workflowData.find(w => w.id === 'biologics')!} />
         </div>
       </section>
 

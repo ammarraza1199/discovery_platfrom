@@ -3,6 +3,7 @@ import { HomePage } from './pages/HomePage';
 import { ChemistryQuantisPage } from './pages/ChemistryQuantisPage';
 import { BiologicsDiscoveryPage } from './pages/BiologicsDiscoveryPage';
 import { WallahGPTPage } from './pages/WallahGPTPage';
+import { WorkflowsPage } from './pages/WorkflowsPage';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/chemistry-quantis" element={<ChemistryQuantisPage />} />
         <Route path="/biologics-discovery" element={<BiologicsDiscoveryPage />} />
         <Route path="/wallahgpt" element={<WallahGPTPage />} />
+        <Route path="/workflows" element={<WorkflowsPage />} />
         
         {/* Redirects for old routes */}
         <Route path="/chemistry42" element={<Navigate to="/chemistry-quantis" replace />} />

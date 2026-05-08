@@ -18,12 +18,12 @@ export const Navbar = () => {
       {/* Links (Centered in the remaining space) */}
       <div className="hidden lg:flex flex-grow items-center justify-center gap-8 text-[13px] font-medium text-text-secondary">
         <Link to="/" className={`transition-colors border-b-2 py-1 ${isActive('/') ? 'text-primary border-primary' : 'border-transparent hover:text-primary hover:border-primary/50'}`}>Platform</Link>
-        <span className="text-text-secondary/50 cursor-not-allowed transition-colors border-b-2 py-1 border-transparent">PandaOmics</span>
-        <Link to="/biologics-discovery" className={`transition-colors border-b-2 py-1 ${isActive('/biologics-discovery') ? 'text-primary border-primary' : 'border-transparent hover:text-primary hover:border-primary/50'}`}>Biologics Discovery</Link>
-        <Link to="/chemistry-quantis" className={`transition-colors border-b-2 py-1 ${isActive('/chemistry-quantis') ? 'text-primary border-primary' : 'border-transparent hover:text-primary hover:border-primary/50'}`}>Chemistry Quantis</Link>
+        <span className="text-text-secondary/50 cursor-not-allowed transition-colors border-b-2 py-1 border-transparent">PandaOmics (GQ Discovery)</span>
+        <Link to="/biologics-discovery" className={`transition-colors border-b-2 py-1 ${isActive('/biologics-discovery') ? 'text-primary border-primary' : 'border-transparent hover:text-primary hover:border-primary/50'}`}>GQ Discovery</Link>
+        <Link to="/chemistry-quantis" className={`transition-colors border-b-2 py-1 ${isActive('/chemistry-quantis') ? 'text-primary border-primary' : 'border-transparent hover:text-primary hover:border-primary/50'}`}>GQ Chemistry</Link>
         <span className="text-text-secondary/50 cursor-not-allowed transition-colors border-b-2 py-1 border-transparent">inClinico</span>
         <span className="text-text-secondary/50 cursor-not-allowed transition-colors border-b-2 py-1 border-transparent">Science42 DONA</span>
-        <Link to="/wallahgpt" className={`transition-colors border-b-2 py-1 ${isActive('/wallahgpt') ? 'text-primary border-primary' : 'border-transparent hover:text-primary hover:border-primary/50'}`}>WallahGPT</Link>
+        <Link to="/wallahgpt" className={`transition-colors border-b-2 py-1 ${isActive('/wallahgpt') ? 'text-primary border-primary' : 'border-transparent hover:text-primary hover:border-primary/50'}`}>GQ GPT</Link>
         <span className="text-text-secondary/50 cursor-not-allowed transition-colors border-b-2 py-1 border-transparent">Nac101</span>
       </div>
 
