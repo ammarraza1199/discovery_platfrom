@@ -187,7 +187,7 @@ export const HomePage = () => {
               </div>
             </div>
 
-            {/* Col 3 */}
+            {/* Col 3 - Commented out placeholders
             <div className="flex flex-col gap-6 z-10">
               <div className="card p-4 rounded-3xl hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 bg-white/80 backdrop-blur-xl border border-primary/5">
                 <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">Medicine42</h3>
@@ -227,6 +227,7 @@ export const HomePage = () => {
                 </div>
               </div>
             </div>
+            */}
           </div>
         </div>
 
