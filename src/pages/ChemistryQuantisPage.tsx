@@ -4,17 +4,38 @@ import { Footer } from '../components/Footer';
 import { FeatureDetailModal } from '../components/FeatureDetailModal';
 import { InteractiveHeroBackground } from '../components/InteractiveHeroBackground';
 import { 
-  FlaskConical, Layers, Brain, Waves, 
+  FlaskConical, Layers, Brain, Waves as WavesIcon, 
   GitBranch, FileSearch, Sparkles, ChevronRight,
-  MousePointer2, ArrowRight
+  MousePointer2, ArrowRight, Database, Cpu, Activity, Search, Network, FileText, Shield, ShieldCheck, Zap, RefreshCw, CheckCircle
+
+
+
 } from 'lucide-react';
+
+
+
+
 import { motion } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
 import { SnakePipeline, workflowData } from '../components/WorkflowPipeline';
+import { ThreeStepProcess } from '../components/ThreeStepProcess';
+import { MoleculeIcon } from '../components/ScientificIcons';
+
+
+
+
+
+
 
 export const ChemistryQuantisPage = () => {
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeMethodologyIndex, setActiveMethodologyIndex] = useState(0);
+
+  const Target = ({ className, size }: { className?: string, size?: number }) => (
+    <Search className={className} size={size} />
+  );
+
 
   const features = [
     {
@@ -33,8 +54,53 @@ export const ChemistryQuantisPage = () => {
         "Direct SMILES String Conversion",
         "Competitive Intelligence Hub",
         "Literature-to-Data Pipeline"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Literature Ingestion",
+          items: [
+            { label: "Patent PDFs", icon: FileText, description: "Unstructured chemical patent literature." },
+            { label: "Scientific Papers", icon: Search, description: "Peer-reviewed journals and documentation." },
+            { label: "SAR Context", icon: Layers, description: "Historical structure-activity relationship metadata." }
+          ]
+
+        },
+        processing: {
+          title: "PACE AI Engine",
+          groups: [
+            {
+              title: "Extraction",
+              items: [
+                { label: "OCR Ensemble", icon: Cpu },
+                { label: "NLP Structure ID", icon: Brain },
+                { label: "Diagram Parsing", icon: Layers },
+                { label: "Job Registration", icon: Zap }
+              ]
+            },
+            {
+              title: "Conversion",
+              items: [
+                { label: "SMILES Generation", icon: Activity },
+                { label: "SAR Mapping", icon: Database },
+                { label: "Potency Extraction", icon: Target },
+                { label: "IP Classification", icon: Shield }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Intelligence Hub",
+          items: [
+            { label: "Potency Tables", icon: Database, description: "Machine-readable SAR datasets." },
+            { label: "Chemical IP Map", icon: Network, description: "Competitive landscape visualization." },
+            { label: "Priority Leads", icon: CheckCircle, description: "Identified high-interest candidates for screening." }
+          ]
+
+        }
+      }
     },
+
     {
       id: 'molspace',
       title: 'MolSpace Explorer',
@@ -51,8 +117,52 @@ export const ChemistryQuantisPage = () => {
         "Library Diversity Clustering",
         "Interactive Space Navigation",
         "Neighborhood-based Search"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Library Upload",
+          items: [
+            { label: "Molecular Libraries", icon: Database, description: "Vast collections of SMILES or SDF files." },
+            { label: "Query Molecules", icon: Search, description: "Lead structures for neighborhood search." },
+            { label: "Design Constraints", icon: Target, description: "Specific physicochemical property filters." }
+          ]
+
+        },
+        processing: {
+          title: "MolSpace Analysis",
+          groups: [
+            {
+              title: "Fingerprinting",
+              items: [
+                { label: "2048-bit Morgan", icon: Cpu },
+                { label: "Vector Encoding", icon: MoleculeIcon },
+                { label: "Canonicalization", icon: RefreshCw },
+                { label: "RDKit Validation", icon: ShieldCheck }
+              ]
+            },
+            {
+              title: "Projection",
+              items: [
+                { label: "UMAP Projection", icon: MoleculeIcon },
+                { label: "Jaccard Distance", icon: Brain },
+                { label: "Manifold Mapping", icon: Layers },
+                { label: "Cluster ID", icon: Network }
+              ]
+            }
+          ]
+        },
+
+
+        output: {
+          title: "Navigable Space",
+          items: [
+            { label: "3D Molecular Maps", icon: Layers, description: "Interactive high-dimensional projections." },
+            { label: "Diversity Report", icon: Activity, description: "Statistical analysis of library coverage." }
+          ]
+        }
+      }
     },
+
     {
       id: 'generative',
       title: 'Generative Chemistry',
@@ -69,8 +179,49 @@ export const ChemistryQuantisPage = () => {
         "Pharmacokinetic Constraint Logic",
         "Scaffold Morphing & Decoration",
         "Targeted Diversity Generation"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Design Constraints",
+          items: [
+            { label: "Target Profiles", icon: Target, description: "Desired pharmacokinetic properties (LogP, PSA)." },
+            { label: "Active Scaffolds", icon: Sparkles, description: "Seed molecules for generative design." }
+          ]
+        },
+        processing: {
+          title: "Generative Engine",
+          groups: [
+            {
+              title: "AI Ensemble",
+              items: [
+                { label: "LSTM Sequence", icon: Cpu },
+                { label: "VAE Latent Space", icon: Layers },
+                { label: "Transformer Logic", icon: Brain },
+                { label: "Architecture Pool", icon: Zap }
+              ]
+            },
+            {
+              title: "Reward Engine",
+              items: [
+                { label: "9-Step Physics", icon: Sparkles },
+                { label: "Lipinski Filter", icon: ShieldCheck },
+                { label: "ADMET Prediction", icon: Activity },
+                { label: "Synthesis Check", icon: Target }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Optimized Leads",
+          items: [
+            { label: "Novel Scaffolds", icon: MoleculeIcon, description: "Synthetically accessible lead candidates." },
+            { label: "PK radar maps", icon: Activity, description: "Property-matched candidate profiles." }
+          ]
+        }
+      }
     },
+
     {
       id: 'nacho01',
       title: 'Nacho01 Foundation',
@@ -87,13 +238,49 @@ export const ChemistryQuantisPage = () => {
         "Project-specific Fine-tuning",
         "Small Data Property Prediction",
         "Model Confidence Scoring"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Foundation Input",
+          items: [
+            { label: "Pre-trained Models", icon: Brain, description: "GNNs and Transformers trained on base chemistry." },
+            { label: "Project Small Data", icon: Database, description: "Minimal experimental points for fine-tuning." }
+          ]
+        },
+        processing: {
+          title: "Transfer Learning",
+          groups: [
+            {
+              title: "Fine-tuning",
+              items: [
+                { label: "Project Calibration", icon: Activity },
+                { label: "Weight Adjustment", icon: Cpu }
+              ]
+            },
+            {
+              title: "Inference",
+              items: [
+                { label: "Property Prediction", icon: Search },
+                { label: "Confidence Triage", icon: Shield }
+              ]
+            }
+          ]
+        },
+        output: {
+          title: "Project Model",
+          items: [
+            { label: "Calibrated Engine", icon: Sparkles, description: "High-accuracy model for specific targets." },
+            { label: "Prediction Dossier", icon: FileText, description: "Results with uncertainty quantification." }
+          ]
+        }
+      }
     },
+
     {
       id: 'alchemistry',
       title: 'Alchemistry',
       subtitle: 'Molecular Dynamics',
-      icon: Waves,
+      icon: WavesIcon,
       description: 'GPU-accelerated Delta-G binding energy calculations via OpenMM.',
       fullExplanation: [
         "Alchemistry brings high-performance Molecular Dynamics (MD) to the workbench. Utilizing the OpenMM engine and the AMBER14 force field, it simulates the thermodynamic movement of molecules at physiological body temperatures.",
@@ -105,8 +292,50 @@ export const ChemistryQuantisPage = () => {
         "Delta-G Binding Energy (FEP)",
         "Physiological Temp Simulation",
         "Solvent-Aware Dynamic Mapping"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Simulation Prep",
+          items: [
+            { label: "Lead Candidate", icon: MoleculeIcon, description: "3D structure of the potential drug." },
+            { label: "Target Environment", icon: WavesIcon, description: "Solvent and physiological parameters." }
+          ]
+        },
+        processing: {
+          title: "Physics Pipeline",
+          groups: [
+            {
+              title: "Force Field",
+              items: [
+                { label: "AMBER14 Params", icon: Layers },
+                { label: "TIP3P Solvent", icon: WavesIcon },
+                { label: "Langevin Dynamics", icon: Activity },
+                { label: "300K Simulation", icon: Zap }
+              ]
+            },
+            {
+              title: "Thermodynamics",
+              items: [
+                { label: "NES Free Energy", icon: Sparkles },
+                { label: "Delta-G Calculation", icon: Target },
+                { label: "RMSD Tracking", icon: Network },
+                { label: "Equilibrium Check", icon: ShieldCheck }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Dynamic Profile",
+          items: [
+            { label: "Binding Free Energy", icon: Activity, description: "Quantitative thermodynamic stability." },
+            { label: "Movement Maps", icon: WavesIcon, description: "Visual trajectory of binding event." }
+          ]
+        }
+      }
     },
+
+
     {
       id: 'retrosynthesis',
       title: 'Retrosynthesis',
@@ -123,8 +352,44 @@ export const ChemistryQuantisPage = () => {
         "Building Block Availability Check",
         "Multi-path Synthetic Options",
         "Reaction Template Matching"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Target Molecule",
+          items: [
+            { label: "Lead Candidate", icon: MoleculeIcon, description: "The molecule to be synthesized." },
+            { label: "Commercial Blocks", icon: Database, description: "Catalog of available starting materials." }
+          ]
+        },
+        processing: {
+          title: "Synthetic Planning",
+          groups: [
+            {
+              title: "Logic",
+              items: [
+                { label: "Deep Tree Search", icon: GitBranch },
+                { label: "Disconnection AI", icon: Brain }
+              ]
+            },
+            {
+              title: "Verification",
+              items: [
+                { label: "Reaction Templating", icon: Activity },
+                { label: "Cost Analysis", icon: Database }
+              ]
+            }
+          ]
+        },
+        output: {
+          title: "Synthetic Routes",
+          items: [
+            { label: "Ranked Routes", icon: GitBranch, description: "Step-by-step assembly instructions." },
+            { label: "Availability Map", icon: Database, description: "Logistics for reagent procurement." }
+          ]
+        }
+      }
     }
+
   ];
 
   const handleOpenModal = (feature: any) => {
@@ -267,9 +532,10 @@ export const ChemistryQuantisPage = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-text-primary">{feature.title}</h3>
                   <p className="text-primary font-bold text-xs uppercase tracking-widest mb-6">{feature.subtitle}</p>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow break-words">
                     {feature.description}
                   </p>
+
                   <div className="flex items-center gap-2 text-primary font-bold border-t border-primary/5 pt-6 w-full">
                     Know More <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -280,7 +546,60 @@ export const ChemistryQuantisPage = () => {
         </div>
       </section>
 
+      {/* Methodology Section - The 3 Step Process requested by USER */}
+      <section className="py-24 bg-white border-t border-primary/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Operational Methodology</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto mb-12">
+              Explore the technical workflows behind GQ Chemistry. From automated patent extraction to deep retrosynthetic planning.
+            </p>
+
+            {/* Feature Selector for Methodology */}
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
+              {features.filter(f => f.processData).map((feature, idx) => (
+                <button
+                  key={feature.id}
+                  onClick={() => setActiveMethodologyIndex(idx)}
+                  className={`px-6 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 border ${
+                    activeMethodologyIndex === idx 
+                    ? 'bg-primary text-white border-primary shadow-glow scale-105' 
+                    : 'bg-white text-text-secondary border-primary/10 hover:border-primary/30'
+                  }`}
+                >
+                  <feature.icon size={20} />
+                  {feature.title}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          <motion.div
+            key={activeMethodologyIndex}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ThreeStepProcess 
+              title={features.filter(f => f.processData)[activeMethodologyIndex].title + " Pipeline"}
+              subtitle={features.filter(f => f.processData)[activeMethodologyIndex].subtitle}
+              context={activeMethodologyIndex === 1 || activeMethodologyIndex === 0 ? 'compute' : 'biology'}
+              variant="loop"
+
+
+              input={features.filter(f => f.processData)[activeMethodologyIndex].processData!.input}
+              processing={features.filter(f => f.processData)[activeMethodologyIndex].processData!.processing}
+              output={features.filter(f => f.processData)[activeMethodologyIndex].processData!.output}
+            />
+
+
+          </motion.div>
+
+        </div>
+      </section>
+
       {/* Process Visualization (Interactive Snake Pipeline) */}
+
       <section className="py-24 bg-slate-50 border-y border-primary/10 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

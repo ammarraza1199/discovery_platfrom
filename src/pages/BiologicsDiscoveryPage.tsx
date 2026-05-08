@@ -4,24 +4,36 @@ import { Footer } from '../components/Footer';
 import { FeatureDetailModal } from '../components/FeatureDetailModal';
 import { InteractiveHeroBackground } from '../components/InteractiveHeroBackground';
 import { 
-  Dna, Search, Zap, FlaskConical, ShieldCheck, 
+  Search, Zap, FlaskConical, ShieldCheck, 
   Bot, ArrowRight, Shield, CheckCircle, ChevronRight,
-  MousePointer2
+  MousePointer2, Database, Fingerprint, Brain, Cpu, Activity, FileText, Search as SearchIcon, Sparkles, Layers, Target, Network, Microscope, Filter,
+  Waves as WavesIcon
 } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
 import { SnakePipeline, workflowData } from '../components/WorkflowPipeline';
+import { ThreeStepProcess } from '../components/ThreeStepProcess';
+
+
+
+import { ProteinRibbonIcon, PeptideIcon, DnaHelixIcon, MoleculeIcon } from '../components/ScientificIcons';
+
+
 
 export const BiologicsDiscoveryPage = () => {
+
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeMethodologyIndex, setActiveMethodologyIndex] = useState(0);
+
 
   const features = [
     {
       id: 'target-id',
       title: 'Target Identification',
       subtitle: 'Neural-Bio Interface',
-      icon: Dna,
+      icon: DnaHelixIcon,
       description: 'Mapping gene symbols to UniProt dossiers with AlphaFold fallback logic.',
       fullExplanation: [
         "The Target Identification module uses a specialized Neural-Bio Interface to resolve genomic symbols into detailed biochemical dossiers. By integrating UniProtKB and RCSB PDB databases, the system builds a comprehensive map of the biological target.",
@@ -33,8 +45,57 @@ export const BiologicsDiscoveryPage = () => {
         "Geometric Pocket Discovery",
         "Druggability Probability Scoring",
         "Functional Domain Mapping"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Data Acquisition",
+          items: [
+            { label: "Genomic Symbols", icon: DnaHelixIcon, description: "Gene names (BRCA1, EGFR) or standard identifiers." },
+            { label: "Sequence Data", icon: PeptideIcon, description: "FASTA formatted protein sequences for structural analysis." },
+            { label: "Database Queries", icon: Microscope, description: "Automated lookups for UniProtKB and RCSB PDB records." },
+          ]
+
+
+
+        },
+        processing: {
+          title: "Neural-Bio Interface",
+          groups: [
+            {
+              title: "Structure AI",
+              items: [
+                { label: "UniProt Resolution", icon: Search },
+                { label: "RCSB PDB Retrieval", icon: Database },
+                { label: "AlphaFold Fallback", icon: Brain },
+                { label: "Cryo-EM Mapping", icon: Microscope }
+              ]
+
+            },
+            {
+              title: "Geometric Analysis",
+              items: [
+                { label: "P2Rank Prediction", icon: Cpu },
+                { label: "fpocket Voronoi", icon: Layers },
+                { label: "Cavity Mapping", icon: Sparkles },
+                { label: "Druggability Scan", icon: Activity }
+              ]
+            }
+
+          ]
+        },
+        output: {
+          title: "Biochemical Dossier",
+          items: [
+            { label: "Structural Models", icon: ProteinRibbonIcon, description: "High-accuracy 3D folded structures." },
+            { label: "Binding Pockets", icon: SearchIcon, description: "Identified geometric binding sites." },
+            { label: "Druggability Scores", icon: Activity, description: "Quantitative steric/electrostatic scores." },
+          ]
+
+        }
+      }
     },
+
+
     {
       id: 'hit-screening',
       title: 'Virtual Hit Screening',
@@ -51,8 +112,53 @@ export const BiologicsDiscoveryPage = () => {
         "Real-time Streaming Triage",
         "Fragment-based Library Search",
         "Scaffold Diversity Enforcement"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Library Ingestion",
+          items: [
+            { label: "Compound Libraries", icon: Database, description: "Millions of virtual drug candidates." },
+            { label: "2,400D Fingerprints", icon: Fingerprint, description: "High-dimensional mathematical representations." },
+            { label: "ADMET Filters", icon: ShieldCheck, description: "Initial pharmacokinetic and toxicity constraints." }
+          ]
+
+        },
+        processing: {
+          title: "XGBoost Triage",
+          groups: [
+            {
+              title: "Molecular Coding",
+              items: [
+                { label: "Morgan ECFP4", icon: MoleculeIcon },
+                { label: "MACCS Keys", icon: Fingerprint },
+                { label: "RDKit Descriptors", icon: Activity },
+                { label: "Vector Encoding", icon: Cpu }
+              ]
+            },
+            {
+              title: "Affinity Logic",
+              items: [
+                { label: "XGBoost Engine", icon: Zap },
+                { label: "pIC50 Prediction", icon: Target },
+                { label: "Async Pruning", icon: Filter },
+                { label: "Top-100 Retention", icon: Layers }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Candidate List",
+          items: [
+            { label: "Top 100 Scored", icon: FileText, description: "Prioritized list of highest-affinity candidates." },
+            { label: "Diversity Report", icon: Activity, description: "Analysis of chemical scaffold diversity." },
+            { label: "Lead Triage", icon: CheckCircle, description: "Prioritized list for subsequent docking validation." }
+          ]
+
+        }
+      }
     },
+
     {
       id: 'docking',
       title: 'Molecular Docking',
@@ -69,8 +175,50 @@ export const BiologicsDiscoveryPage = () => {
         "Free Energy (Delta-G) Calculation",
         "3D Binding Visualization",
         "Binding Affinity Ranking"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Structural Prep",
+          items: [
+            { label: "Target Structure", icon: ProteinRibbonIcon, description: "3D coordinates of the biological target." },
+            { label: "Ligand Candidates", icon: FlaskConical, description: "Optimized 3D geometries of potential hits." }
+          ]
+        },
+        processing: {
+          title: "Physics Simulation",
+          groups: [
+            {
+              title: "Search Logic",
+              items: [
+                { label: "Monte Carlo Search", icon: Activity },
+                { label: "AutoDock Vina", icon: Cpu },
+                { label: "Water Removal", icon: WavesIcon },
+                { label: "Hydrogen Prep", icon: Sparkles }
+              ]
+            },
+            {
+              title: "Evaluation",
+              items: [
+                { label: "Free Energy Calc", icon: Zap },
+                { label: "Pose Assessment", icon: SearchIcon },
+                { label: "MMFF Relaxation", icon: Layers },
+                { label: "RMSD Balancing", icon: Network }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Docking Report",
+          items: [
+            { label: "Binding Poses", icon: ProteinRibbonIcon, description: "Visualized 3D ligand-receptor orientations." },
+            { label: "Delta-G Scores", icon: Activity, description: "Quantitative thermodynamic stability metrics." }
+          ]
+        }
+      }
     },
+
+
     {
       id: 'lead-opt',
       title: 'Lead Optimization',
@@ -87,8 +235,49 @@ export const BiologicsDiscoveryPage = () => {
         "SA Score Enforcement",
         "SAR Trend Tracking",
         "Bioisosteric Replacements"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Lead Candidate",
+          items: [
+            { label: "Hit Structures", icon: Sparkles, description: "Identified hits for evolutionary optimization." },
+            { label: "MPO Constraints", icon: Target, description: "Multi-parameter objectives (Affinity, PK)." }
+          ]
+        },
+        processing: {
+          title: "Generative Evolution",
+          groups: [
+            {
+              title: "Mutation Engine",
+              items: [
+                { label: "Genetic Algorithm", icon: Activity },
+                { label: "Scaffold Morphing", icon: Layers },
+                { label: "MolGPT Design", icon: Brain },
+                { label: "REINVENT Logic", icon: Zap }
+              ]
+            },
+            {
+              title: "Scoring Hub",
+              items: [
+                { label: "SA Enforcement", icon: Shield },
+                { label: "MPO Balancing", icon: Target },
+                { label: "Bioisostere Swap", icon: Sparkles },
+                { label: "SAR Trend Sync", icon: Cpu }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Optimized Leads",
+          items: [
+            { label: "Refined Candidates", icon: ProteinRibbonIcon, description: "Molecules optimized for clinical success." },
+            { label: "Synthesis Protocols", icon: FileText, description: "Validated routes for wet-lab prep." }
+          ]
+        }
+      }
     },
+
     {
       id: 'admet',
       title: 'ADMET Intelligence',
@@ -105,26 +294,103 @@ export const BiologicsDiscoveryPage = () => {
         "hERG Inhibition Risk",
         "CYP450 Metabolism Profiling",
         "Pharmacokinetic Radar Maps"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Molecular Graphs",
+          items: [
+            { label: "Lead Structures", icon: ProteinRibbonIcon, description: "Final candidates for safety profiling." },
+            { label: "Proprietary Assays", icon: Database, description: "Historical safety and tox data." }
+          ]
+        },
+        processing: {
+          title: "Safety Profiling",
+          groups: [
+            {
+              title: "GNN Inference",
+              items: [
+                { label: "Tox21 Screening", icon: Brain },
+                { label: "ClinTox Mapping", icon: Activity },
+                { label: "hERG Detection", icon: Target },
+                { label: "Liver Tox Scan", icon: Shield }
+              ]
+            },
+            {
+              title: "Pharmacokinetics",
+              items: [
+                { label: "BBBP Classification", icon: Layers },
+                { label: "Lipinski Filter", icon: Filter },
+                { label: "Veber Compliance", icon: FileText },
+                { label: "CYP450 Profile", icon: Sparkles }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Safety Passport",
+          items: [
+            { label: "Risk Radar Maps", icon: Target, description: "Visual toxicity and ADMET profile." },
+            { label: "Pharmacology Dossier", icon: FileText, description: "Comprehensive safety documentation." }
+          ]
+        }
+      }
     },
+
     {
       id: 'robotic',
-      title: 'Robotic Validation',
-      subtitle: 'Opentrons OT-2 Sync',
+      title: 'Wet-Lab Validation',
+      subtitle: 'Native Integration',
       icon: Bot,
       description: 'Direct bridge from in-silico prediction to automated wet-lab validation.',
       fullExplanation: [
-        "Robotic Validation closes the loop between the digital and physical laboratories. The system natively integrates with Opentrons OT-2 liquid handlers by automatically generating executable Python protocols based on the platform's predictions.",
+        "Wet-Lab Validation closes the loop between the digital and physical laboratories. The system natively integrates with automated liquid handlers by automatically generating executable Python protocols based on the platform's predictions.",
         "This seamless transition eliminates human transcription errors and enables high-throughput blinded assays for hit confirmation. The platform tracks the results of these experiments, feeding the physical data back into the AI models for continuous learning."
       ],
       capabilities: [
-        "OT-2 Native Integration",
-        "Auto-Protocol Compilation",
-        "High-Throughput Assay Sync",
-        "Error-Free Lab Transition",
-        "Continuous Learning Loop"
-      ]
+        "Automated Liquid Handling",
+        "Protocol Generation",
+        "High-Throughput Assays",
+        "Physical-Digital Feedback",
+        "Assay Result Tracking"
+      ],
+      processData: {
+        input: {
+          title: "Digital Protocols",
+          items: [
+            { label: "Validated Leads", icon: CheckCircle, description: "Candidates nominated for physical validation." },
+            { label: "Assay Parameters", icon: Layers, description: "Liquid handling and plate map logic." }
+          ]
+        },
+        processing: {
+          title: "Wet-Lab Sync",
+          groups: [
+            {
+              title: "Compilation",
+              items: [
+                { label: "Python Protocol Gen", icon: FileText },
+                { label: "API Handshake", icon: Network }
+              ]
+            },
+            {
+              title: "Automation",
+              items: [
+                { label: "OT-2 Execution", icon: Bot },
+                { label: "Error Triage", icon: Shield }
+              ]
+            }
+          ]
+        },
+        output: {
+          title: "Wet-lab Validation",
+          items: [
+            { label: "Confirmatory Results", icon: Activity, description: "Physical assay data for hit confirmation." },
+            { label: "Learning Loop Feedback", icon: Brain, description: "Data injection back into AI models." }
+          ]
+        }
+      }
     }
+
   ];
 
   const handleOpenModal = (feature: any) => {
@@ -237,9 +503,10 @@ export const BiologicsDiscoveryPage = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-text-primary">{feature.title}</h3>
                   <p className="text-primary font-bold text-xs uppercase tracking-widest mb-6">{feature.subtitle}</p>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow break-words">
                     {feature.description}
                   </p>
+
                   <div className="flex items-center gap-2 text-primary font-bold border-t border-primary/5 pt-6 w-full">
                     Know More <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -250,7 +517,60 @@ export const BiologicsDiscoveryPage = () => {
         </div>
       </section>
 
+      {/* Methodology Section - The 3 Step Process requested by USER */}
+      <section className="py-24 bg-white border-t border-primary/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Operational Methodology</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto mb-12">
+              Deep dive into the scientific pipelines powering GenQuantis. Select a module to explore its specific input-to-output architecture.
+            </p>
+
+            {/* Feature Selector for Methodology */}
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
+              {features.filter(f => f.processData).map((feature, idx) => (
+                <button
+                  key={feature.id}
+                  onClick={() => setActiveMethodologyIndex(idx)}
+                  className={`px-6 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 border ${
+                    activeMethodologyIndex === idx 
+                    ? 'bg-primary text-white border-primary shadow-glow scale-105' 
+                    : 'bg-white text-text-secondary border-primary/10 hover:border-primary/30'
+                  }`}
+                >
+                  <feature.icon size={20} />
+                  {feature.title}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          <motion.div
+            key={activeMethodologyIndex}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ThreeStepProcess 
+              title={features.filter(f => f.processData)[activeMethodologyIndex].title + " Pipeline"}
+              subtitle={features.filter(f => f.processData)[activeMethodologyIndex].subtitle}
+              context="biology"
+              variant="loop"
+
+
+              input={features.filter(f => f.processData)[activeMethodologyIndex].processData!.input}
+              processing={features.filter(f => f.processData)[activeMethodologyIndex].processData!.processing}
+              output={features.filter(f => f.processData)[activeMethodologyIndex].processData!.output}
+            />
+
+          </motion.div>
+
+
+        </div>
+      </section>
+
       {/* Workflow Visualization (Interactive Snake Pipeline) */}
+
       <section className="py-24 bg-slate-50 relative overflow-hidden border-y border-primary/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">

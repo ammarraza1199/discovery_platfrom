@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Play, FileDown, CheckCircle2, ChevronRight, Beaker } from 'lucide-react';
 
+
 interface FeatureDetailModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -11,8 +12,10 @@ interface FeatureDetailModalProps {
     description: string;
     fullExplanation: string[];
     capabilities: string[];
+    processData?: any;
     videoThumbnail?: string;
   } | null;
+
 }
 
 export const FeatureDetailModal: React.FC<FeatureDetailModalProps> = ({ isOpen, onClose, feature }) => {
@@ -51,21 +54,23 @@ export const FeatureDetailModal: React.FC<FeatureDetailModalProps> = ({ isOpen, 
                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                       <Beaker className="text-primary" /> Scientific Overview
                     </h3>
-                    <div className="space-y-4 text-text-secondary leading-relaxed">
+                    <div className="space-y-4 text-text-secondary leading-relaxed break-words">
                       {feature.fullExplanation.map((para, i) => (
                         <p key={i}>{para}</p>
                       ))}
                     </div>
+
                   </section>
 
                   <section className="bg-section-alt p-8 rounded-3xl border border-primary/10">
                     <h3 className="text-xl font-bold mb-6">Core Capabilities</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {feature.capabilities.map((cap, i) => (
-                        <div key={i} className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-primary/5 shadow-sm">
+                        <div key={i} className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-primary/5 shadow-sm overflow-hidden">
                           <CheckCircle2 className="text-primary mt-0.5 flex-shrink-0" size={18} />
-                          <span className="text-sm font-medium text-text-primary">{cap}</span>
+                          <span className="text-sm font-medium text-text-primary break-words">{cap}</span>
                         </div>
+
                       ))}
                     </div>
                   </section>

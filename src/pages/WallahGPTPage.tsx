@@ -4,17 +4,30 @@ import { Footer } from '../components/Footer';
 import { FeatureDetailModal } from '../components/FeatureDetailModal';
 import { InteractiveHeroBackground } from '../components/InteractiveHeroBackground';
 import { 
-  Hourglass, BarChart, Brain, Shield, Lock, 
+  Hourglass, BarChart as ChartIcon, Brain, Shield, Lock, 
   Database, Zap, ChevronRight,
-  MousePointer2, ArrowRight
+  MousePointer2, ArrowRight, Cpu, Activity, Layers, FileText, Sparkles, Target, Microscope, ShieldCheck, RefreshCw, Network
+
+
 } from 'lucide-react';
+
+
 import { motion } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
 import { SnakePipeline, workflowData } from '../components/WorkflowPipeline';
+import { ThreeStepProcess } from '../components/ThreeStepProcess';
+import { DnaHelixIcon } from '../components/ScientificIcons';
+
+
+
+
+
 
 export const WallahGPTPage = () => {
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeMethodologyIndex, setActiveMethodologyIndex] = useState(0);
+
 
   const features = [
     {
@@ -33,13 +46,58 @@ export const WallahGPTPage = () => {
         "Cellular Senescence Mapping",
         "Disease Risk Probability",
         "Therapeutic Target Ranking"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Molecular Profiling",
+          items: [
+            { label: "15-Gene Signatures", icon: DnaHelixIcon, description: "Key genes linked to cellular senescence." },
+            { label: "Clinical Metadata", icon: Database, description: "Baseline health and age metrics." },
+            { label: "Epigenetic Drift", icon: Microscope, description: "Methylation patterns across CpG islands." }
+          ]
+        },
+        processing: {
+          title: "Simulation Engine",
+          groups: [
+            {
+              title: "Feature Extraction",
+              items: [
+                { label: "15-Gene Signature", icon: DnaHelixIcon },
+                { label: "Epigenetic Drift", icon: Microscope },
+                { label: "Senescence Map", icon: Layers },
+                { label: "Cell Cycle Scan", icon: Activity }
+              ]
+            },
+            {
+              title: "Calculation",
+              items: [
+                { label: "Aging Delta AI", icon: Cpu },
+                { label: "Drift Calibration", icon: Brain },
+                { label: "Biological Sync", icon: RefreshCw },
+                { label: "Longevity Triage", icon: Target }
+              ]
+            }
+          ]
+        },
+
+
+        output: {
+          title: "Longevity Insights",
+          items: [
+            { label: "Acceleration Score", icon: FileText, description: "Biological vs Chronological age delta." },
+            { label: "Ranked Targets", icon: Target, description: "Prioritized anti-aging interventions." },
+            { label: "Intervention Map", icon: Network, description: "Visual recommendation of therapy combinations." }
+          ]
+        }
+
+      }
     },
+
     {
       id: 'wallah2',
       title: 'GQ GPT 2',
       subtitle: 'Synthetic Omics Generator',
-      icon: BarChart,
+      icon: ChartIcon,
       description: 'HIPAA-compliant generation of biologically faithful research data.',
       fullExplanation: [
         "GQ GPT 2 is a state-of-the-art generative engine for synthetic biological data. It allows researchers to create high-fidelity transcriptome (RNA-Seq) and methylation matrices that are statistically indistinguishable from real patient data.",
@@ -51,8 +109,49 @@ export const WallahGPTPage = () => {
         "HIPAA/GDPR Compliance",
         "Privacy-First Data Scaling",
         "Biological Correlation Fidelity"
-      ]
+      ],
+      processData: {
+        input: {
+          title: "Baseline Metadata",
+          items: [
+            { label: "Real Omics Data", icon: Database, description: "Small, anonymized real-world datasets." },
+            { label: "Feature Constraints", icon: Layers, description: "Biological bounds for gene expression." }
+          ]
+        },
+        processing: {
+          title: "Generative Scaling",
+          groups: [
+            {
+              title: "Architectures",
+              items: [
+                { label: "GAN / VAE Ensemble", icon: Brain },
+                { label: "Privacy Triage", icon: Cpu },
+                { label: "Latent Mapping", icon: Layers },
+                { label: "Noise Injection", icon: Zap }
+              ]
+            },
+            {
+              title: "Validation",
+              items: [
+                { label: "Correlation Sync", icon: Activity },
+                { label: "Fidelity Scoring", icon: Sparkles },
+                { label: "HIPAA Check", icon: ShieldCheck },
+                { label: "Matrix Verify", icon: Target }
+              ]
+            }
+          ]
+        },
+
+        output: {
+          title: "Synthetic Assets",
+          items: [
+            { label: "RNA-Seq Matrices", icon: ChartIcon, description: "HIPAA-compliant synthetic datasets." },
+            { label: "Validation Report", icon: FileText, description: "Statistical proof of data fidelity." }
+          ]
+        }
+      }
     },
+
     {
       id: 'wallah3',
       title: 'GQ GPT 3',
@@ -187,9 +286,10 @@ export const WallahGPTPage = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-text-primary">{feature.title}</h3>
                   <p className="text-primary font-bold text-xs uppercase tracking-widest mb-6">{feature.subtitle}</p>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow break-words">
                     {feature.description}
                   </p>
+
                   <div className="flex items-center gap-2 text-primary font-bold border-t border-primary/5 pt-8 w-full justify-center">
                     Know More <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -227,7 +327,59 @@ export const WallahGPTPage = () => {
             </div>
           </div>
         </div>
-      </section>      {/* Integrated Research Workflow (Interactive Snake Pipeline) */}
+      </section>      {/* Methodology Section - The 3 Step Process requested by USER */}
+      <section className="py-24 bg-white border-t border-primary/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Operational Methodology</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto mb-12">
+              Explore the digital laboratory. Select a module to see how GQ GPT simulates biological reality with high-fidelity AI models.
+            </p>
+
+            {/* Feature Selector for Methodology */}
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
+              {features.filter(f => f.processData).map((feature, idx) => (
+                <button
+                  key={feature.id}
+                  onClick={() => setActiveMethodologyIndex(idx)}
+                  className={`px-6 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 border ${
+                    activeMethodologyIndex === idx 
+                    ? 'bg-primary text-white border-primary shadow-glow scale-105' 
+                    : 'bg-white text-text-secondary border-primary/10 hover:border-primary/30'
+                  }`}
+                >
+                  <feature.icon size={20} />
+                  {feature.title}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          <motion.div
+            key={activeMethodologyIndex}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ThreeStepProcess 
+              title={features.filter(f => f.processData)[activeMethodologyIndex].title + " Pipeline"}
+              subtitle={features.filter(f => f.processData)[activeMethodologyIndex].subtitle}
+              context="compute"
+              variant="loop"
+
+              input={features.filter(f => f.processData)[activeMethodologyIndex].processData!.input}
+              processing={features.filter(f => f.processData)[activeMethodologyIndex].processData!.processing}
+              output={features.filter(f => f.processData)[activeMethodologyIndex].processData!.output}
+            />
+
+
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* Integrated Research Workflow (Interactive Snake Pipeline) */}
+
       <section className="py-24 px-6 bg-slate-50 border-y border-primary/10 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
