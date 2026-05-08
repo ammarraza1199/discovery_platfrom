@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { BusinessModelsSection } from '../components/BusinessModelsSection';
-import { Diamond, ArrowRight, Download, Dna, TestTube, Star, Hourglass, BarChart, Brain, FlaskConical, RefreshCw, Settings, Waves, Sparkles, Hospital, Microscope, Bot, Database } from 'lucide-react';
+import { Diamond, ArrowRight, Download, Dna, TestTube, Star, Hourglass, BarChart, Brain, FlaskConical, RefreshCw, Settings, Waves, Sparkles } from 'lucide-react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
 import { Link } from 'react-router-dom';
