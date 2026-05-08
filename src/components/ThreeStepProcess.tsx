@@ -40,8 +40,8 @@ interface ThreeStepProcessProps {
     }[];
   };
   output: ProcessStep;
-  image?: string;
 }
+
 
 
 export const ThreeStepProcess: React.FC<ThreeStepProcessProps> = ({ 
@@ -51,9 +51,9 @@ export const ThreeStepProcess: React.FC<ThreeStepProcessProps> = ({
   context = 'biology',
   input, 
   processing, 
-  output,
-  image
+  output 
 }) => {
+
 
   const isCompute = context === 'compute';
   const isLoop = variant === 'loop';
@@ -94,35 +94,8 @@ export const ThreeStepProcess: React.FC<ThreeStepProcessProps> = ({
         )}
       </div>
 
-      {/* Optional Feature Image Visualization */}
-      {image && (
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          className="max-w-5xl mx-auto mb-16 relative group"
-        >
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-light-blue/20 rounded-[32px] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-          <div className="relative bg-white border border-primary/10 rounded-[32px] p-2 overflow-hidden shadow-2xl">
-            <img 
-              src={image} 
-              alt={title} 
-              className="w-full h-auto rounded-[24px] object-cover"
-            />
-            {/* Overlay Gradient for depth */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-60"></div>
-            
-            {/* Caption or Label if needed */}
-            <div className="absolute bottom-6 left-8">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-[10px] font-bold text-white uppercase tracking-widest">Active Simulation Data</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      )}
-
       <div className={`flex flex-col lg:flex-row gap-8 lg:gap-4 items-stretch justify-center`}>
+
 
         {/* Step 1: Input */}
         <motion.div 
