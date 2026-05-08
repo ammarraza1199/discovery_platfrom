@@ -6,7 +6,8 @@ import { InteractiveHeroBackground } from '../components/InteractiveHeroBackgrou
 import { 
   Search, Zap, FlaskConical, ShieldCheck, 
   Bot, ArrowRight, Shield, CheckCircle, ChevronRight,
-  MousePointer2, Database, Fingerprint, Brain, Cpu, Activity, FileText, Search as SearchIcon, Sparkles, Layers, Target, Network, Filter,
+  MousePointer2, Database, Brain, Cpu, Activity, FileText, Search as SearchIcon, Sparkles, Layers, Target, Network, Filter,
+
 
   Waves as WavesIcon
 } from 'lucide-react';
@@ -18,10 +19,13 @@ import { ThreeStepProcess } from '../components/ThreeStepProcess';
 
 
 
-import { ProteinRibbonIcon, DnaHelixIcon, MoleculeIcon } from '../components/ScientificIcons';
+import { ProteinRibbonIcon, DnaHelixIcon } from '../components/ScientificIcons';
+
 
 import targetIdImg from '../assets/workflow_images/Target Identification.png';
 import virtualHitImg from '../assets/workflow_images/Virtual Hit Screening.png';
+import molecularDockingImg from '../assets/workflow_images/Molecular Docking.png';
+
 
 
 export const BiologicsDiscoveryPage = () => {
@@ -112,7 +116,9 @@ export const BiologicsDiscoveryPage = () => {
       title: 'Molecular Docking',
       subtitle: 'Physics-Based Simulation',
       icon: FlaskConical,
+      image: molecularDockingImg,
       description: 'Thermodynamic binding simulation using AutoDock Vina & Monte Carlo search.',
+
       fullExplanation: [
         "The Molecular Docking engine simulates the physical reality of ligand-receptor interactions. Utilizing the AutoDock Vina engine, the system performs a Monte Carlo search across the target's conformational space to identify the most stable binding poses.",
         "Each pose is evaluated using a physics-based scoring function that calculates Delta-G free energy, accounting for hydrogen bonding, van der Waals forces, and electrostatic interactions. The results are visualized in a high-performance GL-rendered 3D viewport."
@@ -127,43 +133,18 @@ export const BiologicsDiscoveryPage = () => {
       processData: {
         input: {
           title: "Structural Prep",
-          items: [
-            { label: "Target Structure", icon: ProteinRibbonIcon, description: "3D coordinates of the biological target." },
-            { label: "Ligand Candidates", icon: FlaskConical, description: "Optimized 3D geometries of potential hits." }
-          ]
+          items: []
         },
         processing: {
           title: "Physics Simulation",
-          groups: [
-            {
-              title: "Search Logic",
-              items: [
-                { label: "Monte Carlo Search", icon: Activity },
-                { label: "AutoDock Vina", icon: Cpu },
-                { label: "Water Removal", icon: WavesIcon },
-                { label: "Hydrogen Prep", icon: Sparkles }
-              ]
-            },
-            {
-              title: "Evaluation",
-              items: [
-                { label: "Free Energy Calc", icon: Zap },
-                { label: "Pose Assessment", icon: SearchIcon },
-                { label: "MMFF Relaxation", icon: Layers },
-                { label: "RMSD Balancing", icon: Network }
-              ]
-            }
-          ]
+          groups: []
         },
-
         output: {
           title: "Docking Report",
-          items: [
-            { label: "Binding Poses", icon: ProteinRibbonIcon, description: "Visualized 3D ligand-receptor orientations." },
-            { label: "Delta-G Scores", icon: Activity, description: "Quantitative thermodynamic stability metrics." }
-          ]
+          items: []
         }
       }
+
     },
 
 
