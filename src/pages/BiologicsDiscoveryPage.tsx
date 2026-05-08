@@ -18,10 +18,11 @@ import { ThreeStepProcess } from '../components/ThreeStepProcess';
 
 
 import { ProteinRibbonIcon, PeptideIcon, DnaHelixIcon, MoleculeIcon } from '../components/ScientificIcons';
-
-
+import targetIdImg from '../assets/workflow_images/Target Identification.png';
 
 export const BiologicsDiscoveryPage = () => {
+
+
 
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,7 +35,9 @@ export const BiologicsDiscoveryPage = () => {
       title: 'Target Identification',
       subtitle: 'Neural-Bio Interface',
       icon: DnaHelixIcon,
+      image: targetIdImg,
       description: 'Mapping gene symbols to UniProt dossiers with AlphaFold fallback logic.',
+
       fullExplanation: [
         "The Target Identification module uses a specialized Neural-Bio Interface to resolve genomic symbols into detailed biochemical dossiers. By integrating UniProtKB and RCSB PDB databases, the system builds a comprehensive map of the biological target.",
         "In cases where experimental 3D structures are missing, the platform automatically triggers an AlphaFold-powered fallback mechanism to predict high-accuracy protein folding. The algorithm then utilizes geometric deep learning to identify potential binding pockets and calculate quantitative druggability scores based on steric and electrostatic complementarity."
@@ -561,7 +564,9 @@ export const BiologicsDiscoveryPage = () => {
               input={features.filter(f => f.processData)[activeMethodologyIndex].processData!.input}
               processing={features.filter(f => f.processData)[activeMethodologyIndex].processData!.processing}
               output={features.filter(f => f.processData)[activeMethodologyIndex].processData!.output}
+              image={(features.filter(f => f.processData)[activeMethodologyIndex] as any).image}
             />
+
 
           </motion.div>
 
