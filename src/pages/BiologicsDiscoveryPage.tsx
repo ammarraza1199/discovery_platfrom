@@ -18,9 +18,9 @@ import { ThreeStepProcess } from '../components/ThreeStepProcess';
 
 
 import { ProteinRibbonIcon, PeptideIcon, DnaHelixIcon, MoleculeIcon } from '../components/ScientificIcons';
+import targetIdImg from '../assets/workflow_images/Target Identification.png';
 
 export const BiologicsDiscoveryPage = () => {
-
 
 
 
@@ -35,8 +35,8 @@ export const BiologicsDiscoveryPage = () => {
       title: 'Target Identification',
       subtitle: 'Neural-Bio Interface',
       icon: DnaHelixIcon,
+      image: targetIdImg,
       description: 'Mapping gene symbols to UniProt dossiers with AlphaFold fallback logic.',
-
 
       fullExplanation: [
         "The Target Identification module uses a specialized Neural-Bio Interface to resolve genomic symbols into detailed biochemical dossiers. By integrating UniProtKB and RCSB PDB databases, the system builds a comprehensive map of the biological target.",
@@ -52,50 +52,18 @@ export const BiologicsDiscoveryPage = () => {
       processData: {
         input: {
           title: "Data Acquisition",
-          items: [
-            { label: "Genomic Symbols", icon: DnaHelixIcon, description: "Gene names (BRCA1, EGFR) or standard identifiers." },
-            { label: "Sequence Data", icon: PeptideIcon, description: "FASTA formatted protein sequences for structural analysis." },
-            { label: "Database Queries", icon: Microscope, description: "Automated lookups for UniProtKB and RCSB PDB records." },
-          ]
-
-
-
+          items: []
         },
         processing: {
           title: "Neural-Bio Interface",
-          groups: [
-            {
-              title: "Structure AI",
-              items: [
-                { label: "UniProt Resolution", icon: Search },
-                { label: "RCSB PDB Retrieval", icon: Database },
-                { label: "AlphaFold Fallback", icon: Brain },
-                { label: "Cryo-EM Mapping", icon: Microscope }
-              ]
-
-            },
-            {
-              title: "Geometric Analysis",
-              items: [
-                { label: "P2Rank Prediction", icon: Cpu },
-                { label: "fpocket Voronoi", icon: Layers },
-                { label: "Cavity Mapping", icon: Sparkles },
-                { label: "Druggability Scan", icon: Activity }
-              ]
-            }
-
-          ]
+          groups: []
         },
         output: {
           title: "Biochemical Dossier",
-          items: [
-            { label: "Structural Models", icon: ProteinRibbonIcon, description: "High-accuracy 3D folded structures." },
-            { label: "Binding Pockets", icon: SearchIcon, description: "Identified geometric binding sites." },
-            { label: "Druggability Scores", icon: Activity, description: "Quantitative steric/electrostatic scores." },
-          ]
-
+          items: []
         }
       }
+
     },
 
 
@@ -564,8 +532,8 @@ export const BiologicsDiscoveryPage = () => {
               input={features.filter(f => f.processData)[activeMethodologyIndex].processData!.input}
               processing={features.filter(f => f.processData)[activeMethodologyIndex].processData!.processing}
               output={features.filter(f => f.processData)[activeMethodologyIndex].processData!.output}
+              image={(features.filter(f => f.processData)[activeMethodologyIndex] as any).image}
             />
-
 
 
           </motion.div>
