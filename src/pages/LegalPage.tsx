@@ -65,7 +65,7 @@ export const LegalPage = () => {
               </div>
 
               <div className="pt-8 mt-8 border-t border-primary/5">
-                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026 • Version 2.1</p>
+                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026 </p>
               </div>
             </motion.div>
 
@@ -104,7 +104,7 @@ export const LegalPage = () => {
               </div>
 
               <div className="pt-8 mt-8 border-t border-primary/5">
-                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026 • Version 1.4</p>
+                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026 </p>
               </div>
             </motion.div>
           </div>
