@@ -261,6 +261,57 @@ export const WallahGPTPage = () => {
         </motion.div>
       </section>
 
+      {/* Methodology Section - The 3 Step Process requested by USER */}
+      <section className="py-24 bg-white border-t border-primary/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Operational Methodology</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto mb-12">
+              Explore the digital laboratory. Select a module to see how GQ GPT simulates biological reality with high-fidelity AI models.
+            </p>
+
+            {/* Feature Selector for Methodology */}
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
+              {features.filter(f => f.processData).map((feature, idx) => (
+                <button
+                  key={feature.id}
+                  onClick={() => setActiveMethodologyIndex(idx)}
+                  className={`px-6 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 border ${
+                    activeMethodologyIndex === idx 
+                    ? 'bg-primary text-white border-primary shadow-glow scale-105' 
+                    : 'bg-white text-text-secondary border-primary/10 hover:border-primary/30'
+                  }`}
+                >
+                  <feature.icon size={20} />
+                  {feature.title}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          <motion.div
+            key={activeMethodologyIndex}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ThreeStepProcess 
+              title={features.filter(f => f.processData)[activeMethodologyIndex].title + " Pipeline"}
+              subtitle={features.filter(f => f.processData)[activeMethodologyIndex].subtitle}
+              context="compute"
+              variant="loop"
+
+              input={features.filter(f => f.processData)[activeMethodologyIndex].processData!.input}
+              processing={features.filter(f => f.processData)[activeMethodologyIndex].processData!.processing}
+              output={features.filter(f => f.processData)[activeMethodologyIndex].processData!.output}
+            />
+
+
+          </motion.div>
+
+        </div>
+      </section>
+
       {/* Modules Grid */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
@@ -326,55 +377,6 @@ export const WallahGPTPage = () => {
                </div>
             </div>
           </div>
-        </div>
-      </section>      {/* Methodology Section - The 3 Step Process requested by USER */}
-      <section className="py-24 bg-white border-t border-primary/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Operational Methodology</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto mb-12">
-              Explore the digital laboratory. Select a module to see how GQ GPT simulates biological reality with high-fidelity AI models.
-            </p>
-
-            {/* Feature Selector for Methodology */}
-            <div className="flex flex-wrap justify-center gap-4 mb-16">
-              {features.filter(f => f.processData).map((feature, idx) => (
-                <button
-                  key={feature.id}
-                  onClick={() => setActiveMethodologyIndex(idx)}
-                  className={`px-6 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 border ${
-                    activeMethodologyIndex === idx 
-                    ? 'bg-primary text-white border-primary shadow-glow scale-105' 
-                    : 'bg-white text-text-secondary border-primary/10 hover:border-primary/30'
-                  }`}
-                >
-                  <feature.icon size={20} />
-                  {feature.title}
-                </button>
-              ))}
-            </div>
-          </div>
-          
-          <motion.div
-            key={activeMethodologyIndex}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <ThreeStepProcess 
-              title={features.filter(f => f.processData)[activeMethodologyIndex].title + " Pipeline"}
-              subtitle={features.filter(f => f.processData)[activeMethodologyIndex].subtitle}
-              context="compute"
-              variant="loop"
-
-              input={features.filter(f => f.processData)[activeMethodologyIndex].processData!.input}
-              processing={features.filter(f => f.processData)[activeMethodologyIndex].processData!.processing}
-              output={features.filter(f => f.processData)[activeMethodologyIndex].processData!.output}
-            />
-
-
-          </motion.div>
-
         </div>
       </section>
 

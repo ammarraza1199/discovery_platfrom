@@ -506,46 +506,6 @@ export const ChemistryQuantisPage = () => {
         </motion.div>
       </section>
 
-      {/* Modules Grid */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Scientific Modules</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto">Deep-tech tools for molecular design and synthesis planning.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000 relative z-10">
-            {features.map((feature, i) => (
-              <FadeInWhenVisible key={i}>
-                <motion.div 
-                  whileHover={{ 
-                    y: -12,
-                    rotateX: 2,
-                    boxShadow: "0 20px 40px rgba(11, 95, 255, 0.12), 0 0 20px rgba(11, 95, 255, 0.2)"
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  onClick={() => handleOpenModal(feature)}
-                  className="detail-card p-10 rounded-[40px] flex flex-col h-full bg-white group cursor-pointer"
-                >
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-                    <feature.icon size={32} />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2 text-text-primary">{feature.title}</h3>
-                  <p className="text-primary font-bold text-xs uppercase tracking-widest mb-6">{feature.subtitle}</p>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow break-words">
-                    {feature.description}
-                  </p>
-
-                  <div className="flex items-center gap-2 text-primary font-bold border-t border-primary/5 pt-6 w-full">
-                    Know More <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </motion.div>
-              </FadeInWhenVisible>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Methodology Section - The 3 Step Process requested by USER */}
       <section className="py-24 bg-white border-t border-primary/10">
         <div className="max-w-7xl mx-auto px-6">
@@ -595,6 +555,46 @@ export const ChemistryQuantisPage = () => {
 
           </motion.div>
 
+        </div>
+      </section>
+
+      {/* Modules Grid */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Scientific Modules</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">Deep-tech tools for molecular design and synthesis planning.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000 relative z-10">
+            {features.map((feature, i) => (
+              <FadeInWhenVisible key={i}>
+                <motion.div 
+                  whileHover={{ 
+                    y: -12,
+                    rotateX: 2,
+                    boxShadow: "0 20px 40px rgba(11, 95, 255, 0.12), 0 0 20px rgba(11, 95, 255, 0.2)"
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  onClick={() => handleOpenModal(feature)}
+                  className="detail-card p-10 rounded-[40px] flex flex-col h-full bg-white group cursor-pointer"
+                >
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+                    <feature.icon size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-text-primary">{feature.title}</h3>
+                  <p className="text-primary font-bold text-xs uppercase tracking-widest mb-6">{feature.subtitle}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-10 flex-grow break-words">
+                    {feature.description}
+                  </p>
+
+                  <div className="flex items-center gap-2 text-primary font-bold border-t border-primary/5 pt-6 w-full">
+                    Know More <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </motion.div>
+              </FadeInWhenVisible>
+            ))}
+          </div>
         </div>
       </section>
 
