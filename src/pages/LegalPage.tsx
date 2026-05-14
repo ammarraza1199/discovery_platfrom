@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { Shield, Cookie, Construction } from 'lucide-react';
+import { Shield, Cookie } from 'lucide-react';
 
 export const LegalPage = () => {
   return (

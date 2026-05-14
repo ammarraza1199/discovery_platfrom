@@ -5,7 +5,7 @@ import { FeatureDetailModal } from '../components/FeatureDetailModal';
 import { InteractiveHeroBackground } from '../components/InteractiveHeroBackground';
 import { 
   Search, Zap, FlaskConical, ShieldCheck, 
-  Bot, ArrowRight, Shield, CheckCircle, ChevronRight,
+  Bot, Shield, CheckCircle, ChevronRight,
   MousePointer2
 } from 'lucide-react';
 
