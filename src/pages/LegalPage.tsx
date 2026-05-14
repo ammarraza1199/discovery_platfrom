@@ -40,16 +40,32 @@ export const LegalPage = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8">
                 <Shield className="w-10 h-10" />
               </div>
-              <h2 className="text-3xl font-bold mb-4">Privacy Policy</h2>
-              <div className="flex items-center gap-3 text-amber-600 bg-amber-50 px-4 py-2 rounded-full inline-flex mb-6">
-                <Construction size={18} />
-                <span className="text-sm font-bold">Under Updation</span>
+              <h2 className="text-3xl font-bold mb-6 text-text-primary">Privacy Policy</h2>
+              
+              <div className="space-y-6 text-text-secondary text-sm leading-relaxed overflow-y-auto max-h-[400px] pr-4 custom-scrollbar">
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">1. Data Collection</h3>
+                  <p>We collect information that you provide directly to us, including genomic data, chemical structures, and account information. We also automatically collect telemetry data related to your interaction with our AI models.</p>
+                </section>
+                
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">2. Data Usage</h3>
+                  <p>Your data is used solely to provide and improve the Discovery Platform services. We utilize advanced encryption to ensure that biological insights remain isolated and secure within your enterprise environment.</p>
+                </section>
+                
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">3. Data Security</h3>
+                  <p>We implement industry-standard AES-256 encryption for data at rest and TLS 1.3 for data in transit. Our infrastructure is designed to comply with SOC2 and HIPAA standards for healthcare data processing.</p>
+                </section>
+                
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">4. Your Rights</h3>
+                  <p>In accordance with GDPR and CCPA, you have the right to access, rectify, or delete your personal and research data. You can export your simulation results and chemical property predictions at any time.</p>
+                </section>
               </div>
-              <p className="text-text-secondary leading-relaxed mb-8">
-                Our comprehensive privacy policy is currently being updated to reflect the latest data protection standards and our new Generative AI platform capabilities. We ensure that your biological and chemical data remains strictly confidential and secure.
-              </p>
-              <div className="pt-6 border-t border-primary/5">
-                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026</p>
+
+              <div className="pt-8 mt-8 border-t border-primary/5">
+                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026 • Version 2.1</p>
               </div>
             </motion.div>
 
@@ -63,16 +79,32 @@ export const LegalPage = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8">
                 <Cookie className="w-10 h-10" />
               </div>
-              <h2 className="text-3xl font-bold mb-4">Cookies Policy</h2>
-              <div className="flex items-center gap-3 text-amber-600 bg-amber-50 px-4 py-2 rounded-full inline-flex mb-6">
-                <Construction size={18} />
-                <span className="text-sm font-bold">Under Updation</span>
+              <h2 className="text-3xl font-bold mb-6 text-text-primary">Cookies Policy</h2>
+              
+              <div className="space-y-6 text-text-secondary text-sm leading-relaxed overflow-y-auto max-h-[400px] pr-4 custom-scrollbar">
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">1. What are Cookies?</h3>
+                  <p>Cookies are small text files stored on your device to help us provide a seamless experience on the GenQuantis platform, remembering your session preferences and AI model configurations.</p>
+                </section>
+                
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">2. Essential Cookies</h3>
+                  <p>These are necessary for the platform to function, including authentication, security, and the maintenance of your active drug discovery sessions.</p>
+                </section>
+                
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">3. Analytics Cookies</h3>
+                  <p>We use performance cookies to understand how researchers navigate the platform. This data is anonymized and used to optimize the response times of our generative chemistry engines.</p>
+                </section>
+                
+                <section>
+                  <h3 className="font-bold text-text-primary mb-2">4. Managing Preferences</h3>
+                  <p>You can adjust your cookie settings through your browser at any time. Note that disabling essential cookies may impact the stability of the molecular dynamics simulations.</p>
+                </section>
               </div>
-              <p className="text-text-secondary leading-relaxed mb-8">
-                We use cookies to enhance your experience on our platform and analyze site traffic. Our updated cookies policy will provide granular control over your preferences and detailed information on how we utilize telemetry to improve our AI models.
-              </p>
-              <div className="pt-6 border-t border-primary/5">
-                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026</p>
+
+              <div className="pt-8 mt-8 border-t border-primary/5">
+                <p className="text-xs text-text-secondary font-medium">Last Updated: May 2026 • Version 1.4</p>
               </div>
             </motion.div>
           </div>
