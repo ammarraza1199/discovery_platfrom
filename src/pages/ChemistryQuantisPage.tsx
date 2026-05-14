@@ -223,13 +223,13 @@ export const ChemistryQuantisPage = () => {
     },
 
     {
-      id: 'nacho01',
-      title: 'Nacho01 Foundation',
+      id: 'gnn_transformers',
+      title: 'GNN and Transformers',
       subtitle: 'Transfer Learning Hub',
       icon: Brain,
       description: 'Fine-tuning pre-trained GNNs and Transformers on project-specific data.',
       fullExplanation: [
-        "Nacho01 represents our foundation model hub for chemistry. It contains pre-trained Graph Neural Network (GNN) and Message Passing Neural Network (MPNN) architectures that have already learned the basic 'language' of chemical properties.",
+        "GNN and Transformers represents our foundation model hub for chemistry. It contains pre-trained Graph Neural Network (GNN) and Message Passing Neural Network (MPNN) architectures that have already learned the basic 'language' of chemical properties.",
         "Researchers can take these foundation models and perform 'transfer learning' using project-specific small data. This allows for high-accuracy property prediction even when only a few dozen experimental data points are available, a common bottleneck in early-phase discovery."
       ],
       capabilities: [
@@ -278,7 +278,7 @@ export const ChemistryQuantisPage = () => {
 
     {
       id: 'alchemistry',
-      title: 'Alchemistry',
+      title: 'GQ AI Chemistry',
       subtitle: 'Molecular Dynamics',
       icon: WavesIcon,
       description: 'GPU-accelerated Delta-G binding energy calculations via OpenMM.',
@@ -402,7 +402,7 @@ export const ChemistryQuantisPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-32 px-6 overflow-hidden">
+      <section className="relative pt-24 pb-20 px-6 overflow-hidden">
         <InteractiveHeroBackground />
         
         <div className="max-w-7xl mx-auto relative z-10">
@@ -671,7 +671,7 @@ export const ChemistryQuantisPage = () => {
               </div>
 
               <div className="flex gap-4 pt-4">
-                 <button className="px-8 py-3 bg-primary text-white rounded-full font-bold shadow-glow hover:bg-primary/90 transition-all">Request Demo</button>
+                  <a href="https://genquantis.com/contact##" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-primary text-white rounded-full font-bold shadow-glow hover:bg-primary/90 transition-all inline-block">Request Demo</a>
                  <button className="px-8 py-3 bg-white text-primary border border-primary/20 rounded-full font-bold hover:bg-section-alt transition-all">Scientific PDF</button>
               </div>
             </div>

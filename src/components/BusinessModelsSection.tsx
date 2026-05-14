@@ -17,7 +17,7 @@ export const BusinessModelsSection = () => {
                <h3 className="text-xl font-bold mb-2 text-text-primary">{model.title}</h3>
                <p className="text-text-secondary text-sm">{model.desc}</p>
              </div>
-             <button className="text-primary font-bold flex items-center justify-center gap-2 hover:underline w-full">{model.cta} <ArrowRight className="w-4 h-4"/></button>
+             <a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="text-primary font-bold flex items-center justify-center gap-2 hover:underline w-full">{model.cta} <ArrowRight className="w-4 h-4"/></a>
            </div>
          ))}
       </div>

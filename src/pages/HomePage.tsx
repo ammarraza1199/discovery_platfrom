@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { BusinessModelsSection } from '../components/BusinessModelsSection';
-import { Diamond, ArrowRight, Download, Dna, TestTube, Star, Hourglass, BarChart, Brain, FlaskConical, RefreshCw, Settings, Waves, Sparkles } from 'lucide-react';
+import { Diamond, ArrowRight, Dna, TestTube, Star, Hourglass, BarChart, Brain, FlaskConical, RefreshCw, Settings, Waves, Sparkles, Activity } from 'lucide-react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { FadeInWhenVisible } from '../components/FadeInWhenVisible';
 import { Link } from 'react-router-dom';
@@ -107,7 +107,7 @@ export const HomePage = () => {
           </div>
 
           {/* Right Column: Platform Apps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
             {/* Col 1 */}
             <div className="flex flex-col gap-6">
               <div className="card p-4 rounded-3xl hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 bg-white/80 backdrop-blur-xl border border-primary/5">
@@ -175,13 +175,23 @@ export const HomePage = () => {
                   </Link>
                   <Link to="/chemistry-quantis" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
-                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform"><Waves className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">Alchemistry</h4></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform"><Waves className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GQ AI Chemistry</h4></div>
                     <p className="text-xs text-text-secondary pr-6">Fast molecular dynamics simulation</p>
                   </Link>
                   <Link to="/chemistry-quantis" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
-                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-3 transition-transform"><Sparkles className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">Nacho01 Models</h4></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-3 transition-transform"><Sparkles className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">GNN and Transformers</h4></div>
                     <p className="text-xs text-text-secondary pr-6">Fine-tuning workflows for GNNs & Transformers</p>
+                  </Link>
+                </div>
+              </div>
+              <div className="card p-4 rounded-3xl hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 bg-white/80 backdrop-blur-xl border border-primary/5">
+                <h3 className="text-sm font-bold bg-primary text-white inline-block px-4 py-1.5 rounded-full mb-4 shadow-md">GQ Medical</h3>
+                <div className="space-y-3">
+                  <Link to="/gq-medical" className="group block p-3 hover:bg-primary/5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent hover:border-primary/20 relative overflow-hidden">
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"><ArrowRight className="w-4 h-4 text-primary" /></div>
+                    <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:-rotate-6 transition-transform"><Activity className="w-6 h-6" /></div><h4 className="font-bold group-hover:text-primary transition-colors">Digital Twin</h4></div>
+                    <p className="text-xs text-text-secondary pr-6">Lung tumor detection and surface mapping</p>
                   </Link>
                 </div>
               </div>
@@ -235,20 +245,12 @@ export const HomePage = () => {
         <div className="mt-20 flex flex-col items-center justify-center gap-4 text-center">
           <div className="flex items-center gap-4">
             <span className="font-bold text-lg text-text-primary">Interested in learning more about GenQuantis?</span>
-            <button className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-card hover:bg-primary/90 transition-colors">Contact Us</button>
+            <a href="https://genquantis.com" target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-card hover:bg-primary/90 transition-colors inline-block">Contact Us</a>
           </div>
         </div>
       </section>
 
-      <section className="bg-section-alt py-16 text-center border-y border-primary/10">
-        <h2 className="text-2xl font-bold mb-8">GenQuantis 2-page overview</h2>
-        <div className="flex flex-col items-center gap-4">
-          <ArrowRight className="w-6 h-6 text-primary rotate-90" />
-          <button className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-card hover:bg-primary/90 transition-colors flex items-center gap-2">
-            <Download className="w-5 h-5" /> Download
-          </button>
-        </div>
-      </section>
+
 
       <BusinessModelsSection />
       <Footer />

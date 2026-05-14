@@ -11,12 +11,12 @@ export const Footer = () => {
             <Diamond className="fill-primary w-6 h-6" /> GenQuantis
           </div>
           <ul className="space-y-3 text-sm font-medium text-text-secondary">
-            <li><a href="#" className="hover:text-primary transition-colors">Main</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Mission</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Team</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Sustainability</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Main</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Mission</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Team</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Sustainability</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Careers</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Contact</a></li>
           </ul>
         </div>
         {/* Col 2 */}
@@ -32,22 +32,22 @@ export const Footer = () => {
         <div>
           <h4 className="font-bold text-lg mb-6">Press Relations</h4>
           <ul className="space-y-3 text-sm font-medium text-text-secondary">
-            <li><a href="#" className="hover:text-primary transition-colors">Press Room</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Media Coverage</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Media Kit</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Design Kit</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Press Room</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Media Coverage</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Blog</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Media Kit</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Design Kit</a></li>
           </ul>
         </div>
         {/* Col 4 */}
         <div>
           <h4 className="font-bold text-lg mb-6">Investor Relations</h4>
           <ul className="space-y-3 text-sm font-medium text-text-secondary">
-            <li><a href="#" className="hover:text-primary transition-colors">Corporate Governance</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Listing Documents</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Announcements</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">LSE</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Contact IR</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Corporate Governance</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Listing Documents</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Announcements</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LSE</a></li>
+            <li><a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Contact IR</a></li>
           </ul>
         </div>
       </div>
@@ -55,8 +55,8 @@ export const Footer = () => {
       <div className="border-t border-primary/10 max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-text-secondary">
         <div className="flex gap-4 items-center">
           <span>© 2026 GenQuantis</span>
-          <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-primary transition-colors">Cookies Policy</a>
+          <a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Cookies Policy</a>
         </div>
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">Back to Top <ChevronUp className="w-4 h-4" /></a>

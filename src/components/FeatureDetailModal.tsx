@@ -38,7 +38,7 @@ export const FeatureDetailModal: React.FC<FeatureDetailModalProps> = ({ isOpen, 
                 <h2 className="text-3xl font-bold text-text-primary">{feature.title}</h2>
                 {feature.subtitle && <p className="text-primary font-bold text-sm uppercase tracking-widest mt-1">{feature.subtitle}</p>}
               </div>
-              <button 
+              <button
                 onClick={onClose}
                 className="w-10 h-10 rounded-full bg-section-alt flex items-center justify-center text-text-secondary hover:text-primary transition-colors"
               >
@@ -90,7 +90,7 @@ export const FeatureDetailModal: React.FC<FeatureDetailModalProps> = ({ isOpen, 
                     </div>
                     {/* Placeholder Background */}
                     <div className="absolute inset-0 -z-10 flex items-center justify-center bg-primary/5">
-                        <Diamond className="w-20 h-20 text-primary/10" />
+                      <Diamond className="w-20 h-20 text-primary/10" />
                     </div>
                   </div>
 
@@ -107,10 +107,10 @@ export const FeatureDetailModal: React.FC<FeatureDetailModalProps> = ({ isOpen, 
 
                   {/* Scientific Audit Callout */}
                   <div className="p-6 border-2 border-dashed border-primary/20 rounded-3xl">
-                     <p className="text-[11px] text-text-secondary uppercase font-black tracking-widest mb-2">Compliance Status</p>
-                     <div className="flex items-center gap-2 text-primary font-bold">
-                        <CheckCircle2 size={16} /> FDA 21 CFR Part 11 Validated
-                     </div>
+                    <p className="text-[11px] text-text-secondary uppercase font-black tracking-widest mb-2">Compliance Status</p>
+                    <div className="flex items-center gap-2 text-primary font-bold">
+                      <CheckCircle2 size={16} /> FDA 21 CFR Part 11 Validated
+                    </div>
                   </div>
                 </div>
               </div>
@@ -118,12 +118,12 @@ export const FeatureDetailModal: React.FC<FeatureDetailModalProps> = ({ isOpen, 
 
             {/* Bottom Navigation / Close */}
             <div className="p-8 border-t border-primary/5 text-center">
-               <button 
+              <button
                 onClick={onClose}
                 className="px-8 py-3 bg-section-alt text-text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all flex items-center gap-2 mx-auto"
-               >
-                 Close Exploration <ChevronRight size={18} />
-               </button>
+              >
+                Close Exploration <ChevronRight size={18} />
+              </button>
             </div>
           </motion.div>
         </div>
@@ -133,7 +133,7 @@ export const FeatureDetailModal: React.FC<FeatureDetailModalProps> = ({ isOpen, 
 };
 
 const Diamond = ({ className }: { className?: string }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2L2 12L12 22L22 12L12 2Z" />
-    </svg>
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2L2 12L12 22L22 12L12 2Z" />
+  </svg>
 );

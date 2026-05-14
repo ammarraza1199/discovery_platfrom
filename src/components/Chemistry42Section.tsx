@@ -27,8 +27,8 @@ export const ChemistryQuantisSection = () => {
             { title: "MolSpace Explorer", desc: "High-dimensional projection and visualization of chemical spaces", icon: <Globe className="w-6 h-6" /> },
             { title: "PACE", desc: "Patent-Assisted Chemical Extraction from literature", icon: <Sparkles className="w-6 h-6" /> },
             { title: "Generative Chemistry", desc: "AI ensemble generation for novel molecules", icon: <Dna className="w-6 h-6" /> },
-            { title: "Nacho01 Models", desc: "Fine-tuning workflows for GNNs & Transformers", icon: <Brain className="w-6 h-6" /> },
-            { title: "Alchemistry", desc: "Fast molecular dynamics simulation pipeline", icon: <Zap className="w-6 h-6" /> },
+            { title: "GNN and Transformers", desc: "Fine-tuning workflows for GNNs & Transformers", icon: <Brain className="w-6 h-6" /> },
+            { title: "GQ AI Chemistry", desc: "Fast molecular dynamics simulation pipeline", icon: <Zap className="w-6 h-6" /> },
             { title: "Retrosynthetic Planning", desc: "Deep tree-search reverse synthetic routes", icon: <RefreshCw className="w-6 h-6" /> },
           ].map((app, i) => (
             <FadeInWhenVisible key={i} delay={i*0.1}>
@@ -51,7 +51,7 @@ export const ChemistryQuantisSection = () => {
           <thead>
             <tr className="border-b border-primary/20">
               <th className="py-4 px-6 text-left font-semibold text-text-secondary">Stage</th>
-              {["Gen Chem", "Retrosynthesis", "ADMET", "Alchemistry", "MollSpace", "Model Train"].map((col) => (
+              {["Gen Chem", "Retrosynthesis", "ADMET", "GQ AI Chemistry", "MollSpace", "Model Train"].map((col) => (
                 <th key={col} className="py-4 px-6 text-center font-semibold text-text-primary">{col}</th>
               ))}
             </tr>

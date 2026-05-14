@@ -120,8 +120,8 @@ export const workflowData: WorkflowData[] = [
         id: 'c-p3',
         title: 'Phase 3: Deep Validation',
         steps: [
-          { id: 'c6', title: 'Nacho01 Models', icon: Microscope, action: 'Fine-tunes foundation models on project-specific data.', output: 'High-Accuracy Target Predictions' },
-          { id: 'c7', title: 'Alchemistry', icon: Binary, action: 'OpenMM molecular dynamics for physical binding energy.', output: 'Gibbs Free Energy (ΔG)' },
+          { id: 'c6', title: 'GNN and Transformers', icon: Microscope, action: 'Fine-tunes foundation models on project-specific data.', output: 'High-Accuracy Target Predictions' },
+          { id: 'c7', title: 'GQ AI Chemistry', icon: Binary, action: 'OpenMM molecular dynamics for physical binding energy.', output: 'Gibbs Free Energy (ΔG)' },
           { id: 'c8', title: 'Retrosynthesis', icon: Clock, action: 'Tree-search backward planning to starting materials.', output: 'Validated Synthetic Routes' },
         ],
       },

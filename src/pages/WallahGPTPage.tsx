@@ -182,7 +182,7 @@ export const WallahGPTPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-32 px-6 overflow-hidden">
+      <section className="relative pt-24 pb-20 px-6 overflow-hidden">
         <InteractiveHeroBackground />
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -461,7 +461,7 @@ export const WallahGPTPage = () => {
                       <div className="text-sm font-medium text-white/70">Regulatory Friction <br />(Synthetic Data-Powered)</div>
                    </div>
                    <div className="pt-8 border-t border-white/10">
-                      <button className="w-full py-4 bg-primary text-white rounded-2xl font-bold hover:bg-primary/90 transition-all">Secure Enterprise Access</button>
+                       <a href="https://genquantis.com/contact##" target="_blank" rel="noopener noreferrer" className="w-full py-4 bg-primary text-white rounded-2xl font-bold hover:bg-primary/90 transition-all inline-block text-center">Secure Enterprise Access</a>
                    </div>
                 </div>
               </div>

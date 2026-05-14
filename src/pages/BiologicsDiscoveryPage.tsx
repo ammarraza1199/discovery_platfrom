@@ -6,8 +6,9 @@ import { InteractiveHeroBackground } from '../components/InteractiveHeroBackgrou
 import { 
   Search, Zap, FlaskConical, ShieldCheck, 
   Bot, ArrowRight, Shield, CheckCircle, ChevronRight,
-  MousePointer2, Brain, Activity, FileText, Layers, Network
+  MousePointer2
 } from 'lucide-react';
+
 
 
 
@@ -274,7 +275,7 @@ export const BiologicsDiscoveryPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-32 px-6 overflow-hidden">
+      <section className="relative pt-24 pb-20 px-6 overflow-hidden">
         <InteractiveHeroBackground />
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -322,17 +323,7 @@ export const BiologicsDiscoveryPage = () => {
               Bridging the gap from genomic hypothesis to validated lab protocols.
             </motion.p>
 
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, scale: 0.9 },
-                visible: { opacity: 1, scale: 1 }
-              }}
-              className="flex flex-wrap justify-center gap-6"
-            >
-              <button className="px-10 py-5 bg-primary text-white rounded-2xl font-bold shadow-glow hover:scale-105 transition-all flex items-center gap-3">
-                Download Technical Brochure <ArrowRight size={20} />
-              </button>
-            </motion.div>
+            <div className="h-10" />
           </motion.div>
         </div>
 
