@@ -5,6 +5,7 @@ import { BiologicsDiscoveryPage } from './pages/BiologicsDiscoveryPage';
 import { WallahGPTPage } from './pages/WallahGPTPage';
 import { WorkflowsPage } from './pages/WorkflowsPage';
 import { GQMedicalPage } from './pages/GQMedicalPage';
+import { LegalPage } from './pages/LegalPage';
 
 export default function App() {
   return (
@@ -16,6 +17,8 @@ export default function App() {
         <Route path="/wallahgpt" element={<WallahGPTPage />} />
         <Route path="/workflows" element={<WorkflowsPage />} />
         <Route path="/gq-medical" element={<GQMedicalPage />} />
+        <Route path="/privacy-policy" element={<LegalPage />} />
+        <Route path="/cookies-policy" element={<LegalPage />} />
         
         {/* Redirects for old routes */}
         <Route path="/chemistry42" element={<Navigate to="/chemistry-quantis" replace />} />

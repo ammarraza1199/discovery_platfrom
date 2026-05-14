@@ -55,8 +55,8 @@ export const Footer = () => {
       <div className="border-t border-primary/10 max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-text-secondary">
         <div className="flex gap-4 items-center">
           <span>© 2026 GenQuantis</span>
-          <a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="https://genquantis.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Cookies Policy</a>
+          <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <Link to="/cookies-policy" className="hover:text-primary transition-colors">Cookies Policy</Link>
         </div>
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">Back to Top <ChevronUp className="w-4 h-4" /></a>
